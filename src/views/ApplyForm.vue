@@ -7,7 +7,7 @@ import MainHeader from '../components/headers/MainHeader.vue'
 <section>
     <h2 class="hign-up">Sign up for training</h2>
     <p>Leave your contacts and we will call you back</p>
-    <form id="contactform" action="https://formsubmit.io/send/8cfeff97-df47-40c4-8297-d16e871fa3fd " method="POST">
+    <form id="contactform" action="https://formsubmit.co/9b9e48d59e19046decb17ae387212c79" method="POST">
         <div class="form-inputs">
         <div>
             <!-- <label for="name">Name:</label> -->
