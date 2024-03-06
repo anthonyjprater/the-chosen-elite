@@ -20,7 +20,7 @@ const image = ref("url('/ce_02.jpg')")
     <HeroHeader :item = "items[2]" :backGroundImage = "image" />
     <section>
         <h2>Chosen Elite Basketball</h2>
-        <img class="logo-image" src="elite-logo.svg" alt="">
+        <!-- <img class="logo-image" src="elite-logo.svg" alt=""> -->
         <p>Chosen Elite Basketball Academy is a specialized basketball academy that helps player reach their maximum athletic potential. The academy employs highly qualified coaches and insrtuctors who provide personalized support to each participant, developing their skills and helping them achieve high results.</p>
         <p>Chosen Elite Basketball Academy provides an intensive training program that includes not only on-court training, but also physical training, participation in competitions and tactics discussion sessions. It provides training opportunities for beginners as well as professional athletes looking to improve their level of play.</p>
         <p class="accent">Chosen Elite Basketball Academy emphasizes the development of skills such as ball control, passing, shooting, defense, and the strategic elements of the game, such as reading the game and making decisions on the court. Participants recieve personalized guidance from coaches and assistance in setting and achieving their basketball goals.</p>
