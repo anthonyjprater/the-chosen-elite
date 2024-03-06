@@ -4,7 +4,7 @@
 
 <template>
     <footer role="contentinfo">
-        <a href="#" data-v-ff36cf16=""><img src="/elite-logo.svg" class="logo" alt="" data-v-ff36cf16=""><span class="sr-only" data-v-ff36cf16="">Go to Team Chosen Elite Home Page</span></a>
+        <a href="#" data-v-ff36cf16=""><img src="" class="logo" alt="" data-v-ff36cf16=""><span class="sr-only" data-v-ff36cf16="">Go to Team Chosen Elite Home Page</span></a>
         <!-- image src should be elite-logo.svg -->
         <div class="footer-nav">
             <ul>
