@@ -64,7 +64,8 @@ const toggleHideSubClassMenu = (event) => {
 <template>
     <header class="header" :class="{ transparent: isTransparent }">
         <a href="#">
-          <img src="/elite-logo.svg" class="logo" alt=""/>
+          <img src="" class="logo" alt=""/>
+          <!-- image src is elite-logo svg-->
           <span class="sr-only">Go to Team Chosen Elite Home Page</span>
         </a>
         <nav id="navigation" class="main-nav">
