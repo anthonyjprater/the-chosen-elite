@@ -1,7 +1,7 @@
 <script setup>
 
-function getImageUrl(name) {
-  return new URL(`../assets/${name}.png`, import.meta.url).href
+function getImageUrl(name, ext) {
+  return new URL(`../assets/${name}.${ext}`, import.meta.url).href
 }
 
 </script>
@@ -28,7 +28,7 @@ function getImageUrl(name) {
                 <li>Coach of the Year</li>
             </ul>
         </div>
-        <img :src="getImageUrl('coach')" alt="" width="320px" height="480px">
+        <img :src="getImageUrl('coach','png')" alt="" width="320px" height="480px">
         <RouterLink class="sign-up" :to="{ name: 'apply-form'}">Sign up for training</RouterLink>
     </section>
 </template>

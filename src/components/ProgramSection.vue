@@ -20,7 +20,7 @@
       'time': '3pm-5pm',
       'exceptions': 'Conditions may change',
       'id': '1',
-      'image': '/youth_player_bg.png',
+      'image': '../../src/assets/youth_player_bg.png',
       'path': { name: 'youth' }
     },
     {
@@ -30,7 +30,7 @@
       'time': '6pm-8pm',
       'exceptions': 'Conditions may change',
       'id': '2',
-      'image': '/amateur_player.png',
+      'image': '../../src/assets/amateur_player.png',
       'path': { name: 'amateur' }
     },
     {
@@ -40,7 +40,7 @@
       'time': '5pm-8pm',
       'exceptions': 'Conditions may change',
       'id': '3',
-      'image': '/pro_player.png',
+      'image': '../../src/assets/pro_player.png',
       'path': { name: 'professional' }
     },
     ])

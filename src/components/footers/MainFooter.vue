@@ -1,10 +1,14 @@
 <script setup>
 
+function getImageUrl(name, ext) {
+  return new URL(`../../assets/${name}.${ext}`, import.meta.url).href
+}
+
 </script>
 
 <template>
     <footer role="contentinfo">
-        <a href="#" data-v-ff36cf16=""><img src="/elite-logo.svg" class="logo" alt="" data-v-ff36cf16=""><span class="sr-only" data-v-ff36cf16="">Go to Team Chosen Elite Home Page</span></a>
+        <a href="#" data-v-ff36cf16=""><img :src="getImageUrl('elite-logo', 'svg')" class="logo" alt="" data-v-ff36cf16=""><span class="sr-only" data-v-ff36cf16="">Go to Team Chosen Elite Home Page</span></a>
         <div class="footer-nav">
             <ul>
                 <li class="has-sub-menu">

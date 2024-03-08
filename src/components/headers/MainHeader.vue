@@ -16,6 +16,10 @@ const navigation = ref()
 const team = ref()
 const programs = ref()
 
+function getImageUrl(name, ext) {
+  return new URL(`../../assets/${name}.${ext}`, import.meta.url).href
+}
+
 // const window = globalThis.window;
 
 // window.addEventListener('resize', () => {
@@ -64,7 +68,7 @@ const toggleHideSubClassMenu = (event) => {
 <template>
     <header class="header" :class="{ transparent: isTransparent }">
         <a href="#">
-          <img src="/elite-logo.svg" class="logo" alt=""/>
+          <img :src="getImageUrl('elite-logo', 'svg')" class="logo" alt=""/>
           <span class="sr-only">Go to Team Chosen Elite Home Page</span>
         </a>
         <nav id="navigation" class="main-nav">

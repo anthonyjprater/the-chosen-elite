@@ -2,11 +2,9 @@
 import { ref } from 'vue'
 import imgUrl from '@/assets/coach.png'
 
-// function getImageUrl(name) {
-//   return new URL(`@/assets/${name}.png`, import.meta.url).href
-// }
-
-// const imgUrl = new URL('../assets/coach.png', import.meta.url).href
+function getImageUrl(name) {
+  return new URL(`@/assets/${name}.png`, import.meta.url).href
+}
 
 const props = defineProps({
   summary: {
@@ -21,7 +19,7 @@ const summary = ref(props.summary)
 <!--Program Coach Article-->
     <article>
         <h2>{{ summary.heading }}</h2>
-        <img :src="imgUrl" alt="" />
+        <img :src="getImageUrl('coach','png')" alt="" />
         <p>{{ summary.summary }}</p>
         <ul>
             <li>{{ summary.info[1].content }}</li>

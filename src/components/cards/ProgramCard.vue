@@ -12,6 +12,7 @@ router.push('training/amateur')
 const goToProfessional = () => {
 router.push('training/professional')
 }
+
 const props = defineProps({
     programs: {
       type: Array,
