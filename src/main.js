@@ -2,13 +2,15 @@ import { createApp } from 'vue'
 import router from './router'
 import './style.css'
 import App from './App.vue'
-import Modals from "./plugins/modals"
+import Modals from './plugins/modals'
 import { MotionPlugin } from '@vueuse/motion'
 import VWave from 'v-wave'
+import { createPinia } from 'pinia'
 
+const pinia = createPinia()
 // createApp(App).use(Modals).mount('#app')
 
-createApp(App).use(router).use(Modals).use(MotionPlugin).use(VWave).mount('#app')
+createApp(App).use(router).use(Modals).use(MotionPlugin).use(VWave).use(pinia).mount('#app')
 
 // MENU NAVIGATION-------------------------------------------------------------------------------------------------------
 const nav = document.querySelector('.main-nav')
@@ -213,9 +215,7 @@ function reportWindowSize() {
     // if (window.innerWidth > 768) {
     //   subMenu.classList.remove('hide')
     // }
-    window.innerWidth > 768
-      ? subMenu.classList.remove('.hide')
-      : subMenu.classList.add('.hide')
+    window.innerWidth > 768 ? subMenu.classList.remove('.hide') : subMenu.classList.add('.hide')
   })
 }
 

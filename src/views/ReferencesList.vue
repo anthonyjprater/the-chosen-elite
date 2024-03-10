@@ -4,6 +4,7 @@ import MainHeader from '../components/headers/MainHeader.vue';
 import ReferenceCard from '../components/cards/ReferenceCard.vue';
 import ReviewButton from '../components/buttons/ReviewButton.vue';
 import RatingButton from '../components/buttons/RatingButton.vue';
+import { useReviewStore } from "../stores/review";
 
 // import Modals from "../plugins/modals"
 
@@ -22,6 +23,10 @@ const reviews = ref([
     },
 ])
 
+const reviewStore = useReviewStore();
+
+const currentReview = ref(reviewStore)
+
 const
     $modals = inject("$modals"),
     _result = ref("")
@@ -34,33 +39,46 @@ function showModal() {
         _result.value = "Modal cancelled"
     })
 }
+
+
 </script>
 
 <template>
     <MainHeader></MainHeader>
     <Modal class="review-modal" name="myModal" title="Basketball Academy">
         Thank you for your feedback
-        <form>
+        <form @submit.prevent="showModal">
             <label for="name">
-                <input type="text" id="name" placeholder="Name" dir="auto" spellcheck="false" data-ms-editor="true">
+                <input 
+                type="text" 
+                id="name" 
+                placeholder="Name" 
+                dir="auto" 
+                spellcheck="false" 
+                data-ms-editor="true"
+                v-model="currentReview.name"
+                >
             </label>
             <!-- <label for="evaluation">
                 <input type="text" id="evaluation" placeholder="evaluation">
             </label> -->
             <ratingButton></ratingButton>
+
             <label for="message">
             Your message
             </label>
             <textarea 
             id="message"
             maxlength="150"
-            aria-describedby="charcounter">
+            aria-describedby="charcounter"
+            v-model="currentReview.review"
+            >
             </textarea>
             <div role="status">
             <!-- Do not reference the status element with aria-describedby 
                 Doing so will not work in VoiceOver -->
             <div id="charcounter" class="hint">
-                <span id="currentChars">150</span> 
+                <span id="currentChars">{{ 150 - currentReview.review.length }}</span> 
                 of 150
                 <span class="hidden">
                 characters remaining
@@ -133,4 +151,4 @@ input, textarea:focus-visible {
     font-weight: bold;
 }
 
-</style>
+</style>../stores/review

@@ -1,4 +1,12 @@
 <script setup>
+import { ref } from "vue"
+import { useReviewStore } from "@/stores/review";
+
+const currentRating = ref(0);
+
+const reviewStore = useReviewStore();
+
+reviewStore.rating = currentRating
 
 </script>
 
@@ -6,11 +14,41 @@
     <!-- <div class="rating-component"> -->
         <div class="rating-stars">
                 <!-- <input type="radio" name="rating" id="rs0"><label for="rs0"></label> -->
-                <input type="radio" name="rating" id="rs1"><label for="rs1"></label>
-                <input type="radio" name="rating" id="rs2"><label for="rs2"></label>
-                <input type="radio" name="rating" id="rs3" checked><label for="rs3"></label>
-                <input type="radio" name="rating" id="rs4"><label for="rs4"></label>
-                <input type="radio" name="rating" id="rs5"><label for="rs5"></label>
+                <input 
+				type="radio" 
+				name="rating" 
+				id="rs1" 
+				value="1"
+				v-model="currentRating"
+				><label for="rs1"></label>
+                <input 
+				type="radio" 
+				name="rating" 
+				id="rs2" 
+				value="2"
+				v-model="currentRating"
+				><label for="rs2"></label>
+                <input 
+				type="radio" 
+				name="rating" 
+				id="rs3" 
+				value="3"
+				v-model="currentRating"
+				checked><label for="rs3"></label>
+                <input 
+				type="radio" 
+				name="rating" 
+				id="rs4" 
+				value="4"
+				v-model="currentRating"
+				><label for="rs4"></label>
+                <input 
+				type="radio" 
+				name="rating" 
+				id="rs5" 
+				value="5"
+				v-model="currentRating"
+				><label for="rs5"></label>
                 <!-- <span class="number"></span> -->
             </div>
     <!-- </div> -->

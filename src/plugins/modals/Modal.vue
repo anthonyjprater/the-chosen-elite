@@ -33,7 +33,7 @@ function closeModal(accept = false) {
         <div class="dialog-wrapper">
             
             <div class="header-wrapper">
-                <img src="" width="100" height="100"/>
+                <img src="@/assets/elite-logo.svg" width="100" height="100"/>
                 <!-- Image source will ve the svg logo. -->
                 
                 <header>{{$props.title}}</header>

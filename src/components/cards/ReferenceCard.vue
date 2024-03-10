@@ -1,19 +1,17 @@
 <script setup>
-import { ref } from 'vue';
-import RatingButton from '../buttons/RatingButton.vue';
 
 const props = defineProps({
     reviews: {
       type: Array,
       required: true,
-    },
+    }
   });
 
 </script>
 
 <template>
     <div class="article-container">
-        <article v-for="review in reviews" :key='reviews.id'>
+        <article v-for="review in reviews" :key='review.id'>
             <div>
                 <div>
                     <h2>{{ review.name }}</h2>

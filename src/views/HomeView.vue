@@ -7,6 +7,7 @@ import MainCarousel from '@/components/MainCarousel.vue';
 import ImageGallery from '@/components/ImageGallery.vue';
 import MainContact from '@/components/MainContact.vue';
 import MainSignUp from '@/components/MainSignUp.vue';
+// import image from '@/assets/placeholder-bg.jpg'
 
 const items = ref([
     { title: 'Train Your Mind and Body for Basketball Success' },
@@ -14,7 +15,7 @@ const items = ref([
     { title: 'About Us', description: 'Description 3' }
     ])
 
-const image = ref("url('placeholder-bg.jpg')")
+const image = ref("url('@/assets/placeholder-bg.jpg')")
 
 
 </script>

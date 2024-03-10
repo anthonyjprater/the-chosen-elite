@@ -46,7 +46,7 @@ console.log(bgImage)
   justify-content: center;
   gap: 2rem;
   width: 100vw;
-  background: center/ cover no-repeat v-bind('bgImage');
+  background: center/ cover no-repeat url('@/assets/placeholder-bg.jpg');
   /* background-image: v-bind('bgImage'); */
   padding: 4rem 3rem;
   position: relative;
