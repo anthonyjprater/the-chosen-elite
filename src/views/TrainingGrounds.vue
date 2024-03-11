@@ -25,7 +25,7 @@ const locations = ref([
   <MainHeader></MainHeader>
   <section>
     <h1>Training Grounds</h1>
-    <article v-for="location in locations" key='location.id'>
+    <article v-for="location in locations" :key='location.id'>
       <img :src="location.image" alt="" width="280" height="160">
       <div>
         <h2>{{ location.heading }}</h2>

@@ -33,7 +33,7 @@ console.log(bgImage)
 <template>
   <div class="main-hero">
     <MainHeader :isTransparent="transparent" />
-    <h2 class="hero-headline" v-motion-slide-visible-once-left :delay="300" >{{ title }}</h2>
+    <h2 class="hero-headline" v-motion-slide-visible-once-left :delay="150" >{{ title }}</h2>
     <RouterLink class="sign-up" :to="{ name: 'apply-form'}">Sign up for training</RouterLink>
   </div>
 </template>
