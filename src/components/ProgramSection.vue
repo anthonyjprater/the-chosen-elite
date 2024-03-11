@@ -12,7 +12,7 @@
   const artists = props.artists;
 
 
-  const programs = ref([
+  const programsList = ref([
     {
       'title': 'children',
       'ages': 'From 6 to 9 years old',
@@ -20,7 +20,7 @@
       'time': '3pm-5pm',
       'exceptions': 'Conditions may change',
       'id': '1',
-      'image': '../../src/assets/youth_player_bg.png',
+      'image': '../assets/youth_player_bg.png',
       'path': { name: 'youth' }
     },
     {
@@ -30,7 +30,7 @@
       'time': '6pm-8pm',
       'exceptions': 'Conditions may change',
       'id': '2',
-      'image': '../../src/assets/amateur_player.png',
+      'image': '../assets/amateur_player.png',
       'path': { name: 'amateur' }
     },
     {
@@ -40,7 +40,7 @@
       'time': '5pm-8pm',
       'exceptions': 'Conditions may change',
       'id': '3',
-      'image': '../../src/assets/pro_player.png',
+      'image': '../assets/pro_player.png',
       'path': { name: 'professional' }
     },
     ])
@@ -51,7 +51,7 @@
         <h2>Our Programs</h2>
         <p>We have individual programs for children, amateurs, and professionals. Our programs are tailored to the age and skill level of each group.</p>
         <div class="card-container">
-            <ProgramCard :programs="programs" />
+            <ProgramCard :programs="programsList" />
         </div>
     </section>
 </template>

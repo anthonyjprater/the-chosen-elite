@@ -45,7 +45,7 @@ function showModal() {
 
 <template>
     <MainHeader></MainHeader>
-    <Modal class="review-modal" name="myModal" title="Basketball Academy">
+    <ModalView class="review-modal" name="myModal" title="Basketball Academy">
         Thank you for your feedback
         <form @submit.prevent="showModal">
             <label for="name">
@@ -87,7 +87,7 @@ function showModal() {
             </div>
 
         </form>
-    </Modal>
+    </ModalView>
     <section>
         <div>
             <h1>References</h1>

@@ -1,46 +1,40 @@
-import { reactive } from "vue"
-import Modal from "./Modal.vue"
+import { reactive } from 'vue'
+import Modal from './ModalView.vue'
 
-const
+const _current = reactive({ name: '', resolve: null, reject: null }),
+  api = {
+    active() {
+      return _current.name
+    },
 
-_current = reactive({name:"",resolve:null,reject:null}),
+    show(name) {
+      _current.name = name
 
-api = {
+      return new Promise((resolve = () => {}, reject = () => {}) => {
+        _current.resolve = resolve
 
-      active() {return _current.name;},
+        _current.reject = reject
+      })
+    },
 
-      show(name) {
+    accept() {
+      _current.resolve()
+      _current.name = ''
+    },
 
-           _current.name = name;
+    cancel() {
+      _current.reject()
+      _current.name = ''
+    }
+  },
+  plugin = {
+    install(App, options) {
+      //4
 
-           return new Promise(
+      App.component('ModalView', Modal)
 
-           (resolve = () => { }, reject = () => { }) => {
-
-                _current.resolve = resolve;
-
-                _current.reject = reject;
-
-           })
-
-      },
-
-      accept() {_current.resolve();_current.name = "" },
-
-      cancel() {_current.reject();_current.name = "" },
-      
-
-},
-
-plugin = {
-
-     install(App, options) {                    //4
-
-         App.component("Modal", Modal)
-
-         App.provide("$modals", api)
-
-     }
-}
+      App.provide('$modals', api)
+    }
+  }
 
 export default plugin

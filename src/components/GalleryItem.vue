@@ -7,17 +7,13 @@ const props = defineProps({
 </script>
 <template>
     <figure>
-      <img :src="image.image" alt="">
+      <img :src="props.image.image" alt="">
     </figure>
 </template>
 
 <style scoped>
     h3 {
         color: var(--green);
-    }
-    
-    figure {
-      /* width: min(300px, 100%); */
     }
 
     img {
