@@ -92,7 +92,7 @@ const router = createRouter({
     },
     {
       path: '/references',
-      name: 'references',
+      name: 'references-list',
       component: ReferencesList
     },
     {
