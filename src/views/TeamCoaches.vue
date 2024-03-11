@@ -39,7 +39,7 @@ const coachSummary = ref([
     <section>
         <h1>Coaches</h1>
         <div>
-            <article v-for="coach in coachSummary" key='coach.id'>
+            <article v-for="coach in coachSummary" :key='coach.id'>
                 <img :src="imgUrl" alt="" />
                 <h2>{{ coach.heading }}</h2>
                 <h3>Main coach</h3>
