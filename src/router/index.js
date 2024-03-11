@@ -6,12 +6,12 @@ import AmateurTraining from '../components/programs/AmateurTraining.vue'
 import YouthTraining from '../components/programs/YouthTraining.vue'
 import ProfessionalTraining from '../components/programs/ProfessionalTraining.vue'
 import TeamCoaches from '@/views/TeamCoaches.vue'
-import ApplyForm from '@/views/ApplyForm.vue'
-import ReferencesList from '@views/ReferencesList.vue'
-import ContactView from '@/views/ContactView.vue'
-import TrainingGrounds from '@/views/TrainingGrounds.vue'
-import GalleryView from '@/views/GalleryView.vue'
-import LatestNews from '@/views/LatestNews.vue'
+import ApplyForm from '../views/ApplyForm.vue'
+import ReferencesList from '..views/ReferencesList.vue'
+import ContactView from '../views/ContactView.vue'
+import TrainingGrounds from '../views/TrainingGrounds.vue'
+import GalleryView from '../views/GalleryView.vue'
+import LatestNews from '../views/LatestNews.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
