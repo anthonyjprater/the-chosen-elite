@@ -1,10 +1,10 @@
 <script setup>
 import { ref, inject } from "vue"
-import MainHeader from '../components/headers/MainHeader.vue';
-import ReferenceCard from '../components/cards/ReferenceCard.vue';
-import ReviewButton from '../components/buttons/ReviewButton.vue';
-import RatingButton from '../components/buttons/RatingButton.vue';
-import { useReviewStore } from "../stores/review";
+import MainHeader from '@/components/headers/MainHeader.vue';
+import ReferenceCard from '@/components/cards/ReferenceCard.vue';
+import ReviewButton from '@/components/buttons/ReviewButton.vue';
+import RatingButton from '@/components/buttons/RatingButton.vue';
+import { useReviewStore } from "@/stores/review";
 
 // import Modals from "../plugins/modals"
 

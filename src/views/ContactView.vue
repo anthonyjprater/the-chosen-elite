@@ -1,12 +1,14 @@
 <script setup>
-import MainHeader from '../components/headers/MainHeader.vue'
+import MainHeader from '@/components/headers/MainHeader.vue'
 
 </script>
 
 <template>
   <MainHeader />
+  <section>
   <h5>Come Back Soon!
   This Page is Under Construction.</h5>
+  </section>
 </template>
 
 <style scoped>

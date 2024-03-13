@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue';
-import MainHeader from '../components/headers/MainHeader.vue';
+import MainHeader from '@/components/headers/MainHeader.vue';
 import courtOne from '@/assets/court1.png'
 import courtTwo from '@/assets/court2.png'
 

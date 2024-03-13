@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue';
-import MainHeader from '../components/headers/MainHeader.vue';
+import MainHeader from '@/components/headers/MainHeader.vue';
 import imgUrl from '@/assets/coach.png'
 
 const coachSummary = ref([

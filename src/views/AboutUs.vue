@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue';
 import myImg from '@/assets/coach.png'
-import HeroHeader from '../components/headers/HeroHeader.vue';
+import HeroHeader from '@/components/headers/HeroHeader.vue';
 
 function getImageUrl(name, ext) {
   return new URL(`../assets/${name}.${ext}`, import.meta.url).href
