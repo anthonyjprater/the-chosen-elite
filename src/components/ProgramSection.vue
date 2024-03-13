@@ -1,7 +1,9 @@
 <script setup>
 import { ref } from 'vue'
 import ProgramCard from './cards/ProgramCard.vue';
-import myImg from '@/assets/amateur_player.png'
+import myYouthImg from '@/assets/youth_player_bg.png'
+import myAmateurImg from '@/assets/amateur_player.png'
+import myProfessionalImg from '@/assets/professional_player.png'
 
   const props = defineProps({
     programs: {
@@ -21,7 +23,7 @@ import myImg from '@/assets/amateur_player.png'
       'time': '3pm-5pm',
       'exceptions': 'Conditions may change',
       'id': '1',
-      'image': '@/assets/youth_player_bg.png',
+      'image': myYouthImg,
       'path': { name: 'youth' }
     },
     {
@@ -31,7 +33,7 @@ import myImg from '@/assets/amateur_player.png'
       'time': '6pm-8pm',
       'exceptions': 'Conditions may change',
       'id': '2',
-      'image': myImg,
+      'image': myAmateurImg,
       'path': { name: 'amateur' }
     },
     {
@@ -41,7 +43,7 @@ import myImg from '@/assets/amateur_player.png'
       'time': '5pm-8pm',
       'exceptions': 'Conditions may change',
       'id': '3',
-      'image': '../assets/pro_player.png',
+      'image': myProfessionalImg,
       'path': { name: 'professional' }
     },
     ])
