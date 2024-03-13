@@ -22,7 +22,7 @@ const locations = ref([
 </script>
 
 <template>
-  <MainHeader></MainHeader>
+  <MainHeader />
   <section>
     <h1>Training Grounds</h1>
     <article v-for="location in locations" :key='location.id'>
