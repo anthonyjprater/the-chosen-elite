@@ -44,7 +44,7 @@ function showModal() {
 </script>
 
 <template>
-    <MainHeader></MainHeader>
+    <MainHeader />
     <ModalView class="review-modal" name="myModal" title="Basketball Academy">
         Thank you for your feedback
         <form @submit.prevent="showModal">

@@ -86,22 +86,22 @@ const router = createRouter({
       ]
     },
     {
-      path: '/apply/',
+      path: '/apply',
       name: 'apply-form',
       component: ApplyForm
     },
     {
-      path: '/references/',
-      name: 'references-list',
+      path: '/references',
+      name: 'references',
       component: ReferencesList
     },
     {
-      path: '/contact/',
+      path: '/contact',
       name: 'contact',
       component: ContactView
     },
     {
-      path: '/training_grounds/',
+      path: '/training_grounds',
       name: 'training-grounds',
       component: TrainingGrounds
     },
@@ -111,7 +111,7 @@ const router = createRouter({
       component: GalleryView
     },
     {
-      path: '/news/',
+      path: '/latest_news',
       name: 'latest-news',
       component: LatestNews
     }
