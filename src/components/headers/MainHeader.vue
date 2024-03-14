@@ -100,7 +100,7 @@ const toggleHideSubClassMenu = (event) => {
                     <li><RouterLink :to="{ name: 'professional'}">Advanced</RouterLink></li>
                   </ul>
                 </li>
-                <li><a href="/references">References</a></li>
+                <li><RouterLink :to="{ name: 'references'}">References</RouterLink></li>
                 <li><RouterLink :to="{ name: 'photo-gallery'}">Gallery</RouterLink></li>
                 <li><RouterLink :to="{ name: 'news'}">News</RouterLink></li>
                 <li><RouterLink :to="{ name: 'contact'}">Contact</RouterLink></li>
