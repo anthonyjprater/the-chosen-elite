@@ -111,8 +111,8 @@ const router = createRouter({
       component: GalleryView
     },
     {
-      path: '/latest_news',
-      name: 'latest-news',
+      path: '/news',
+      name: 'news',
       component: LatestNews
     }
   ]
