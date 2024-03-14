@@ -1,17 +1,17 @@
 <script setup>
-import { useRouter } from 'vue-router'
-const router = useRouter()
+// import { useRouter } from 'vue-router'
+// const router = useRouter()
 
-const goToYouth = () => {
-router.push('training/youth')
-}
+// const goToYouth = () => {
+// router.push('training/youth')
+// }
 
-const goToamateur = () => {
-router.push('training/amateur')
-}
-const goToProfessional = () => {
-router.push('training/professional')
-}
+// const goToamateur = () => {
+// router.push('training/amateur')
+// }
+// const goToProfessional = () => {
+// router.push('training/professional')
+// }
 
 const props = defineProps({
     programs: {
