@@ -100,12 +100,12 @@ const toggleHideSubClassMenu = () => {
                     <li><RouterLink :to="{ name: 'professional'}">Advanced</RouterLink></li>
                   </ul>
                 </li>
-                <li><a href="/references">References</a></li>
+                <li><RouterLink :to="{ name: 'references'}">References</RouterLink></li>
                 <li><RouterLink :to="{ name: 'photo-gallery'}">Gallery</RouterLink></li>
-                <li><a href="/news">News</a></li>
-                <li><a href="/contact">Contact</a></li>
-                <li><a href="/training_grounds">Training Grounds</a></li>
-                <li><a class="apply" href="/apply">Apply</a></li>
+                <li><RouterLink :to="{ name: 'news'}">News</RouterLink></li>
+                <li><RouterLink :to="{ name: 'contact'}">Contact</RouterLink></li>
+                <li><RouterLink :to="{ name: 'training-grounds'}">Training Grounds</RouterLink></li>
+                <li><RouterLink :to="{ name: 'apply-form'}">Apply</RouterLink></li>
             </ul>
         </nav>
     </header>
