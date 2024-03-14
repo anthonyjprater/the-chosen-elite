@@ -3,11 +3,14 @@ import { ref } from "vue"
 import GalleryItem from "./GalleryItem.vue";
 import 'vue3-carousel/dist/carousel.css'
 import { Carousel, Slide, Pagination } from 'vue3-carousel'
+import image1 from '@/assets/image_1.jpg'
+import image2 from '@/assets/image_2.jpg'
+import image3 from '@/assets/image_3.jpg'
 
 const images = ref([
-  { id: '1', title: 'Elevate Your Game with Our Elite Basketball Training Academy', image: "/../assets/image_1.jpg"},
-  { id: '2', title: 'Transform Your Skills at Our Youth Basketball Training Academy', image: "../assets/image_2.jpg"},
-  { id: '3', title: 'Score Big with Our Specialized Basketball Shooting Academy', image: "../assets/image_3.jpg"}
+  { id: '1', title: 'Elevate Your Game with Our Elite Basketball Training Academy', image: image1},
+  { id: '2', title: 'Transform Your Skills at Our Youth Basketball Training Academy', image: image2},
+  { id: '3', title: 'Score Big with Our Specialized Basketball Shooting Academy', image: image3}
 ])
 
 const breakpoints = {
