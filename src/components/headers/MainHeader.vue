@@ -53,11 +53,11 @@ const toggleHideClass = () => {
   // hideClass.value === 'hide' ? '' : 'hide';
 }
 
-const toggleHideSubClass = (event) => {
+const toggleHideSubClass = () => {
   isHiddenSub.value = !isHiddenSub.value
 }
 
-const toggleHideSubClassMenu = (event) => {
+const toggleHideSubClassMenu = () => {
   hideClass.value = !hideClass.value
 }
 
@@ -66,11 +66,11 @@ const toggleHideSubClassMenu = (event) => {
 </script>
 
 <template>
-    <header class="header" :class="{ transparent: isTransparent }">
-        <a href="#">
+    <header class="header" :class="{ transparent: props.isTransparent }">
+        <RouterLink :to="{ name: 'home'}" class="logo-link">
           <img :src="getImageUrl('elite-logo', 'svg')" class="logo" alt=""/>
           <span class="sr-only">Go to Team Chosen Elite Home Page</span>
-        </a>
+        </RouterLink>
         <nav id="navigation" class="main-nav">
           <a href="#main" class="skip-link">Skip navigation</a>
             <button class="menu-trigger" @click="toggleHideClass">
@@ -130,6 +130,10 @@ nav.main-nav ul.transparent {
   background: rgba(0, 0, 0, 0.9);
 }
 
+.logo-link {
+  z-index: 3;
+}
+
 .logo {
   width: 3em;
   height: 3em;
@@ -142,6 +146,7 @@ nav.main-nav ul.transparent {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
 
+
 /* NAV STYLES */
 button {
   font-family: inherit;
@@ -150,7 +155,7 @@ button {
   margin: 0;
   overflow: visible;
   text-transform: none;
-  -webkit-appearance: button;
+  /*-webkit-appearance: button;*/
   border: 0;
   background: none;
 }
