@@ -3,7 +3,7 @@ import { ref } from 'vue'
 import ProgramCard from './cards/ProgramCard.vue';
 import myYouthImg from '@/assets/youth_player_bg.png'
 import myAmateurImg from '@/assets/amateur_player.png'
-import myProfessionalImg from '@/assets/professional_player.png'
+import myProfessionalImg from '@/assets/pro_player.png'
 
   const props = defineProps({
     programs: {
