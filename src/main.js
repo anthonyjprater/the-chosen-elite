@@ -6,6 +6,7 @@ import Modals from './plugins/modals'
 import { MotionPlugin } from '@vueuse/motion'
 import VWave from 'v-wave'
 import { createPinia } from 'pinia'
+import './registerServiceWorker'
 
 const pinia = createPinia()
 // createApp(App).use(Modals).mount('#app')
