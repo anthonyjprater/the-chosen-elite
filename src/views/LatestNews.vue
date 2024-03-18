@@ -1,11 +1,14 @@
 <script setup>
 import MainHeader from '@/components/headers/MainHeader.vue'
+import NewsFeed from '@/components/NewsFeed.vue';
 
 </script>
 
 <template>
   <MainHeader />
-  <section></section>
+  <section>
+    <NewsFeed />
+  </section>
 </template>
 
 <style scoped>
