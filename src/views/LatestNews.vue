@@ -7,6 +7,8 @@ import NewsFeed from '@/components/NewsFeed.vue';
 <template>
   <MainHeader />
   <section>
+    <h5>Come Back Soon!
+    This Page is Under Construction.</h5>
     <NewsFeed />
   </section>
 </template>
@@ -22,6 +24,12 @@ section {
   width: 100vw;
   padding: 3rem 1.5rem;
   gap: 2rem;
+}
+
+h5 {
+  background: var(--green);
+  text-shadow: 1px 1px 1px #000;
+  padding: 1rem;
 }
 
 </style>

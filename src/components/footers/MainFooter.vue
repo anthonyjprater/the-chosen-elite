@@ -14,11 +14,11 @@ function getImageUrl(name, ext) {
                 <li class="has-sub-menu">
                   <button class="footer-nav-trigger">General</button>
                   <ul class="footer-sub-menu">
-                    <li><a href="/references">References</a></li>
+                    <li><RouterLink :to="{ name: 'references'}">References</RouterLink></li>
                     <li><RouterLink :to="{ name: 'photo-gallery'}">Gallery</RouterLink></li>
-                    <li><a href="/news">News</a></li>
-                    <li><a href="/contact">Contact</a></li>
-                    <li><a href="/training_grounds">Training Grounds</a></li>
+                    <li><RouterLink :to="{ name: 'news'}">News</RouterLink></li>
+                    <li><RouterLink :to="{ name: 'contact'}">Contact</RouterLink></li>
+                    <li><RouterLink :to="{ name: 'training-grounds'}">Training Grounds</RouterLink></li>
                   </ul>
                 </li>
                 <li class="has-sub-menu">
@@ -35,7 +35,7 @@ function getImageUrl(name, ext) {
                   
                   <ul class="footer-sub-menu">
                       <li><RouterLink :to="{ name: 'about-us' }">About Us</RouterLink></li>
-                      <li><a href="/coaches">Coaches</a></li>
+                      <li><RouterLink :to="{ name: 'team-coaches'}">Coaches</RouterLink></li>
                       <li><a href="/merch">Merch</a></li>
                   </ul>
                 </li>
