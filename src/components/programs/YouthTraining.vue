@@ -25,10 +25,10 @@ const programOverviews = ref([
     },
     { id: 2,
       heading: 'Training for Amateurs' ,
-      text1: "A children's training session at Chosen Elite Academy is a fun and intensive experience that develops children's physical and technincal skills in basketball. The training is conducted by qualified coaches who help children understand and enjoy the game.",
-      text2: "During the training, children learn the basics of basketball, such as ball control, passing, shooting, and defense. They are trained in small groups, which allow each child to recieve individual attention from the coaches. During the training process, children learn to work as a team, develop coordination and flexibility, and also improve their physical fitness." ,
-      text3: "One of the key aspects of the training is creating a friendly atmosphere where each child feels confident and an important member of the team. Children recieve praise and support from coaches and other participants, which helps them to improve their self-esteem and confidence." ,
-      text4: "At the end of each training session, children play games where they can show their new skills and learn to work as a team. Training at Chosen Elite Academy is an excellent way for children to develop, enjoy the game, and learn to collaborate with others."
+      text1: "The program develops pre-teen and teenage players' intermediate to advanced physical and technical skills in basketball. The training is conducted by experienced coaches who help players refine their skills and deepen their understanding of the game.",
+      text2: "During the training, players work on advanced techniques such as ball-handling, footwork, shooting mechanics, offensive moves, and defensive strategies. They train in position-specific groups, allowing coaches to provide specialized instruction tailored to each player's role on the court. The training process emphasizes skills development, tactical awareness, and physical conditioning to prepare players for competitive gameplay.",
+      text3: "One of the key aspects of the training is fostering a competitive yet supportive environment where players are challenged to push their limits while maintaining a team-first mentality. Coaches provide constructive feedback and motivate players to improve their mental toughness and decision-making on the court.",
+      text4: "At the end of each training session, players participate in situational drills and scrimmages, where they can apply their newly learned skills and strategies in game-like scenarios. The program at the Elite Youth Basketball Academy is designed to help players reach their full potential, develop a passion for the game, and prepare them for the next level of competition."
     },
     { id: 3,
       heading: 'Training for Professionals' ,
@@ -50,12 +50,12 @@ const coachSummary = ref([
       ]
     },
     { id: 2,
-      heading: "Children's Coach - Michael Jordan" ,
-      summary: "John Smith is a passionate and seasoned basketball coach with over two decades of experience shaping young athletes into champions. His coaching journey began on the hardwood of local high schools, where he honed his skills and developed a deep love for the game. Known for his strategic brilliance and motivational prowess, John has led several teams to victory in regional championships. His commitment to player development, teamwork, and sportsmanship makes him a respected figure in the basketball community, inspiring the next generation of hoop dreams.",
+      heading: "Amateur - Coach Roberts" ,
+      summary: "Coach Roberts is a highly respected and accomplished basketball coach with over two decades of experience coaching at the youth and high school levels. Her coaching philosophy revolves around developing well-rounded players who excel both on and off the court. Known for her intense yet nurturing coaching style, Coach Roberts has led numerous teams to championship titles and has helped countless players earn college scholarships. Her commitment to player development, attention to detail, and emphasis on character-building have made her a sought-after mentor in the basketball community.",
       info: [
-        { content: "Founder Chosen Elite Academy, trainer"},
-        { content: "Head Coach Team Chosen Elite"},
-        { content: "Cascade Middle School Boys Basketball Head Coach"},
+        { content: "Head Coach at Elite Youth Basketball Academy"},
+        { content: "Former Head Coach at Westlake High School (State Champions 2019, 2021)"},
+        { content: "Certified USA Basketball Coach Instructor"},
       ]
     },
     { id: 1,
