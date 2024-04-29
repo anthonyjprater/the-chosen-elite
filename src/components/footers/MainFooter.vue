@@ -45,10 +45,10 @@ function getImageUrl(name, ext) {
           <div class="footer-links">
             <div>
               <a href="mailto:nash.pluto@pmail.verse"><i class="fa-solid fa-phone"></i></a>
-              <a href="mailto:nash.pluto@pmail.verse">basketball@gmail.com</a></div>
+              <a href="mailto:nash.pluto@pmail.verse">tgprater81@gmail.com</a></div>
             <div>
               <a href="tel:+15555555555"><i class="fa-regular fa-envelope"></i></a>
-              <a href="tel:+15555555555">(311) 555-2368</a></div>
+              <a href="tel:+15555555555">(425) 299-0864</a></div>
             <div class="social-links">
               <a href=""><i class="fa-sharp fa-solid fa-paper-plane"></i></a>
               <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
@@ -56,7 +56,7 @@ function getImageUrl(name, ext) {
             </div>
           </div>
           <div class="copyright">
-            <small>Copyright &copy; Hustle Basketball Academy</small>
+            <small>Copyright &copy; Chosen Elite Basketball Academy</small>
             <small>All rights reserved</small>
           </div>
         </address>
