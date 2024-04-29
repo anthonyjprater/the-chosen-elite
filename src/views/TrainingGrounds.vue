@@ -7,15 +7,15 @@ import courtTwo from '@/assets/court2.png'
 const locations = ref([
     { id: 1,
       image: courtOne,
-      heading: 'Olympic View' ,
+      heading: 'Olympic View Middle School' ,
       text1: "A full-size professional basketball hall is located in the Innovation Center on the 4th floor of the PRO-Trainer Fitness Club. The gym is equipped with everything you need to train children and adults. cozy locker rooms, private lockers for changing and much more are available for Chosen Elite Basketball students.",
       text2: "2602 Mukilteo Speedway, Mukilteo, WA 98275" ,
     },
     { id: 2,
       image: courtTwo,
-      heading: 'Olympic View' ,
+      heading: 'Discovery Elementary School' ,
       text1: "A full-size professional basketball hall is located in the Innovation Center on the 4th floor of the PRO-Trainer Fitness Club. The gym is equipped with everything you need to train children and adults. cozy locker rooms, private lockers for changing and much more are available for Chosen Elite Basketball students.",
-      text2: "2602 Mukilteo Speedway, Mukilteo, WA 98275" ,
+      text2: "11700 Meridian Ave, Everett, WA 98208" ,
     },
 ])
 
