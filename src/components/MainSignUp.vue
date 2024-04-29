@@ -21,7 +21,7 @@ import { useField, useForm } from 'vee-validate';
     <section>
         <h2 class="hign-up">Sign up for training</h2>
         <p>Leave your contacts and we will call you back</p>
-        <form @submit="onSubmit">
+        <form id="contactform" action="https://formsubmit.co/9b9e48d59e19046decb17ae387212c79" method="POST">
           <div class="form-inputs">
             <div>
               <!-- <label for="name">Name:</label> -->
