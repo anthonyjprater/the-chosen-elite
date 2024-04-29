@@ -1,12 +1,12 @@
 <script setup>
 import { ref } from 'vue';
 import MainHeader from '@/components/headers/MainHeader.vue';
-import imgUrl from '@/assets/coach.png'
+import imgUrl from '@/assets/coach_tim.png'
 
 const coachSummary = ref([
     { id: 1,
-      heading: "John Smith" ,
-      summary: "John Smith is a passionate and seasoned basketball coach with over two decades of experience shaping young athletes into champions. His coaching journey began on the hardwood of local high schools, where he honed his skills and developed a deep love for the game. Known for his strategic brilliance and motivational prowess, John has led several teams to victory in regional championships. His commitment to player development, teamwork, and sportsmanship makes him a respected figure in the basketball community, inspiring the next generation of hoop dreams.",
+      heading: "Tim Prater" ,
+      summary: "Tim Prater is a passionate and seasoned basketball coach with over two decades of experience shaping young athletes into champions. His coaching journey began on the hardwood of local high schools, where he honed his skills and developed a deep love for the game. Known for his strategic brilliance and motivational prowess, John has led several teams to victory in regional championships. His commitment to player development, teamwork, and sportsmanship makes him a respected figure in the basketball community, inspiring the next generation of hoop dreams.",
       info: [
         { content: "Founder Chosen Elite Academy, trainer"},
         { content: "Head Coach Team Chosen Elite"},
@@ -14,8 +14,8 @@ const coachSummary = ref([
       ]
     },
     { id: 2,
-      heading: "Michael Jordan" ,
-      summary: "John Smith is a passionate and seasoned basketball coach with over two decades of experience shaping young athletes into champions. His coaching journey began on the hardwood of local high schools, where he honed his skills and developed a deep love for the game. Known for his strategic brilliance and motivational prowess, John has led several teams to victory in regional championships. His commitment to player development, teamwork, and sportsmanship makes him a respected figure in the basketball community, inspiring the next generation of hoop dreams.",
+      heading: "Tim Prater" ,
+      summary: "Tim Prater is a passionate and seasoned basketball coach with over two decades of experience shaping young athletes into champions. His coaching journey began on the hardwood of local high schools, where he honed his skills and developed a deep love for the game. Known for his strategic brilliance and motivational prowess, John has led several teams to victory in regional championships. His commitment to player development, teamwork, and sportsmanship makes him a respected figure in the basketball community, inspiring the next generation of hoop dreams.",
       info: [
         { content: "Founder Chosen Elite Academy, trainer"},
         { content: "Head Coach Team Chosen Elite"},
@@ -23,8 +23,8 @@ const coachSummary = ref([
       ]
     },
     { id: 1,
-      heading: "God Shammgod" ,
-      summary: "John Smith is a passionate and seasoned basketball coach with over two decades of experience shaping young athletes into champions. His coaching journey began on the hardwood of local high schools, where he honed his skills and developed a deep love for the game. Known for his strategic brilliance and motivational prowess, John has led several teams to victory in regional championships. His commitment to player development, teamwork, and sportsmanship makes him a respected figure in the basketball community, inspiring the next generation of hoop dreams.",
+      heading: "Tim Prater" ,
+      summary: "Tim Prater is a passionate and seasoned basketball coach with over two decades of experience shaping young athletes into champions. His coaching journey began on the hardwood of local high schools, where he honed his skills and developed a deep love for the game. Known for his strategic brilliance and motivational prowess, John has led several teams to victory in regional championships. His commitment to player development, teamwork, and sportsmanship makes him a respected figure in the basketball community, inspiring the next generation of hoop dreams.",
       info: [
         { content: "Founder Chosen Elite Academy, trainer"},
         { content: "Head Coach Team Chosen Elite"},

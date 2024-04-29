@@ -19,7 +19,7 @@ const summary = ref(props.summary)
 <!--Program Coach Article-->
     <article>
         <h2>{{ summary.heading }}</h2>
-        <img :src="getImageUrl('coach','png')" alt="" />
+        <img :src="getImageUrl('coach_tim','png')" alt="" />
         <p>{{ summary.summary }}</p>
         <ul>
             <li>{{ summary.info[1].content }}</li>

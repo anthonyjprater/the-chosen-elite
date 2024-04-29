@@ -11,7 +11,7 @@ function getImageUrl(name, ext) {
         <div>
             <article>
                 <h2>Head coach - Timothy Prater </h2>
-                <p class="headcoach-details">Tim P. is an exceptional basketball training coach with a relentless dedication to the game. His expertise and motivating approach inspire athletes to surpass their limits, fostering a generation of skilled players. With a focus on fundamentals and strategic prowess, Tim P. has become a guiding force for aspiring ballers seeking to elevate their game to new heights. #BasketballCoach #TrainingGuru</p>
+                <p class="headcoach-details">Coach Prater is an exceptional basketball training coach with a relentless dedication to the game. His expertise and motivating approach inspire athletes to surpass their limits, fostering a generation of skilled players. With a focus on fundamentals and strategic prowess, Coach Prater has become a guiding force for aspiring ballers seeking to elevate their game to new heights. #BasketballCoach #TrainingGuru</p>
             </article>
             <h3>Accomplishments</h3>
             <ul>
@@ -28,7 +28,7 @@ function getImageUrl(name, ext) {
                 <li>Coach of the Year</li>
             </ul>
         </div>
-        <img :src="getImageUrl('coach','png')" alt="" width="320px" height="480px">
+        <img :src="getImageUrl('coach_tim','png')" alt="" width="320px" height="480px">
         <RouterLink class="sign-up" :to="{ name: 'apply-form'}">Sign up for training</RouterLink>
     </section>
 </template>
