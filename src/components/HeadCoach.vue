@@ -11,7 +11,17 @@ function getImageUrl(name, ext) {
         <div>
             <article>
                 <h2>Head coach - Timothy Prater </h2>
-                <p class="headcoach-details">Coach Prater is an exceptional basketball training coach with a relentless dedication to the game. His expertise and motivating approach inspire athletes to surpass their limits, fostering a generation of skilled players. With a focus on fundamentals and strategic prowess, Coach Prater has become a guiding force for aspiring ballers seeking to elevate their game to new heights. #BasketballCoach #TrainingGuru</p>
+                <p class="headcoach-details">Meet Timothy Prater, a basketball virtuoso hailing from the heart of Louisiana. From a tender age, Timothy's love affair with basketball ignited a flame that would shape his destiny. Fuelled by an unwavering passion and an unyielding work ethic, he embarked on a journey marked by dedication and innovation.
+
+Timothy's basketball journey began as a varsity player in 8th grade, setting the stage for a remarkable career trajectory. Yet, his story transcends mere accolades; it's a testament to his commitment to the game he loves. After years of honing his skills on the court, he felt a calling to give back, to impart his knowledge and expertise to the next generation of hoop dreamers.
+
+His foray into coaching was a natural evolution, driven by a desire to nurture talent and cultivate greatness. As he trained a group of local high school kids, he witnessed their transformation, their ascent to collegiate and even professional ranks. It was a realization of the profound impact of skill development, of unlocking potential and instilling a mindset of excellence.
+
+But Timothy's coaching philosophy extends beyond the basics; it's about instilling versatility and adaptability. He believes in crafting not just players, but complete athletes, capable of excelling in any position on the court. With a focus on ball handling prowess, he earned the moniker "ChosenHandle," a testament to his legendary skills and innovative training methods.
+
+As an exceptional basketball training coach, Timothy Prater embodies excellence and dedication. His unique blend of expertise and inspiration empowers athletes to transcend their limitations and reach new heights. With a strategic focus on fundamentals and tactical brilliance, he's become a beacon of guidance for aspiring ballers worldwide.
+
+Join Timothy Prater on a journey of transformation, where passion meets purpose, and greatness knows no bounds. Elevate your game with the #BasketballCoach #TrainingGuru who's redefining the art of basketball mastery.</p>
             </article>
             <h3>Accomplishments</h3>
             <ul>
