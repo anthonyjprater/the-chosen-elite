@@ -19,9 +19,9 @@ function getImageUrl(name, ext) {
 
 <p>But Timothy's coaching philosophy extends beyond the basics; it's about instilling versatility and adaptability. He believes in crafting not just players, but complete athletes, capable of excelling in any position on the court. With a focus on ball handling prowess, he earned the moniker "ChosenHandle," a testament to his legendary skills and innovative training methods.</p>
 
-<p>As an exceptional basketball training coach, Timothy Prater embodies excellence and dedication. His unique blend of expertise and inspiration empowers athletes to transcend their limitations and reach new heights. With a strategic focus on fundamentals and tactical brilliance, he's become a beacon of guidance for aspiring ballers worldwide.</p>
+<p>As an exceptional basketball trainer, Coach Prater embodies excellence and dedication. His unique blend of expertise and inspiration empowers athletes to transcend their limitations and reach new heights. With a strategic focus on fundamentals and tactical brilliance, he's become a beacon of guidance for aspiring ballers worldwide.</p>
 
-<p>Join Timothy Prater on a journey of transformation, where passion meets purpose, and greatness knows no bounds. Elevate your game with the #BasketballCoach #TrainingGuru who's redefining the art of basketball mastery.</p>
+<p>Join Coach Tim on a journey of transformation, where passion meets purpose, and greatness knows no bounds. Elevate your game with the #BasketballCoach #TrainingGuru who's redefining the art of basketball mastery.</p>
             </article>
             <h3>Accomplishments</h3>
             <ul>
