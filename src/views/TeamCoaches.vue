@@ -14,15 +14,15 @@ const coachSummary = ref([
       ]
     },
     { id: 2,
-      heading: "Tim Prater" ,
-      summary: "Tim Prater is a passionate and seasoned basketball coach with over two decades of experience shaping young athletes into champions. His coaching journey began on the hardwood of local high schools, where he honed his skills and developed a deep love for the game. Known for his strategic brilliance and motivational prowess, John has led several teams to victory in regional championships. His commitment to player development, teamwork, and sportsmanship makes him a respected figure in the basketball community, inspiring the next generation of hoop dreams.",
+      heading: "Ron Mincy" ,
+      summary: "Ron Mincy is a passionate and seasoned basketball coach with over two decades of experience shaping young athletes into champions. His coaching journey began on the hardwood of local high schools, where he honed his skills and developed a deep love for the game. Known for his strategic brilliance and motivational prowess, John has led several teams to victory in regional championships. His commitment to player development, teamwork, and sportsmanship makes him a respected figure in the basketball community, inspiring the next generation of hoop dreams.",
       info: [
-        { content: "Founder Chosen Elite Academy, trainer"},
-        { content: "Head Coach Team Chosen Elite"},
-        { content: "Cascade Middle School Boys Basketball Head Coach"},
+        { content: "Training director and Boy’s director for Washington Swarm where he was responsible for mentoring young coaches and trainers"},
+        { content: "Assistant Coach for “Girls Elite Prep” in Issaquah"},
+        { content: "15 + years of experience including coaching teams and leading training with North Sound Titans, Seattle Future, and Jackson HS feeder select"},
       ]
     },
-    { id: 1,
+    { id: 3,
       heading: "Tim Prater" ,
       summary: "Tim Prater is a passionate and seasoned basketball coach with over two decades of experience shaping young athletes into champions. His coaching journey began on the hardwood of local high schools, where he honed his skills and developed a deep love for the game. Known for his strategic brilliance and motivational prowess, John has led several teams to victory in regional championships. His commitment to player development, teamwork, and sportsmanship makes him a respected figure in the basketball community, inspiring the next generation of hoop dreams.",
       info: [
