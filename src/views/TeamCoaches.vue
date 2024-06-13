@@ -149,6 +149,10 @@ li::marker {
         flex-direction: row;
     }
 
+    section div :nth-child(2) {
+        order: 2;
+    }
+
   h1 {
     font-size: 2.5rem;
     }
