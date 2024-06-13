@@ -149,8 +149,14 @@ li::marker {
         flex-direction: row;
     }
 
-    section div :nth-child(2) {
+    section div :nth-child(1) {
         order: 2;
+    }
+    section div :nth-child(2) {
+        order: 1;
+    }
+    section div :nth-child(3) {
+        order: 3;
     }
 
   h1 {
