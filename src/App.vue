@@ -14,6 +14,27 @@ import MainFooter from './components/footers/MainFooter.vue'
 // import ApplyForm from './views/ApplyForm.vue';
 // import AboutUs from './views/AboutUs.vue';
 // import GalleryView from './views/GalleryView.vue';
+import { useSeoMeta } from '@unhead/vue'
+
+useSeoMeta({
+  title: 'The Chosen Elite Training Academy - Official Web Site - Home',
+  description: 'Elevate your basketball skills at The Chosen Elite Academy. Expert training for youth and teens. Group, individual, and team programs available.',
+  ogDescription: 'The Chosen Elite Academy: Where basketball dreams take flight. We offer expert training programs for youth and teens competing in AAU, high school, and club basketball. Our group and individual sessions, along with team try-outs, are designed to elevate your game. We believe every player can improve with purposeful training and practice. Join us and unlock your full potential on the court!',
+  ogTitle: 'The Chosen Elite Academy | Elevate Your Basketball Game',
+  ogImage: 'https://www.teamchosenelite.com/elite-logo.svg',
+  twitterCard: 'summary_large_image',
+  applicationName:'The Chosen Elite Training Academy - Official Web Site - Home',
+  creator:'GameFaceLabs',
+  robots: 'all',
+  canonical: 'https://www.teamchosenelite.com',
+  ogUrl:'https://www.teamchosenelite.com',
+  ogType:'website',
+  ogSiteName:'The Chosen Elite Acedemy',
+  mobileWebAppCapable: 'yes',
+  appleMobileWebAppCapable: 'yes'
+})
+
+
 
 </script>
 

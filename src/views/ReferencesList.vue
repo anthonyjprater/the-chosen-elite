@@ -10,16 +10,22 @@ import { useReviewStore } from "@/stores/review";
 
 const reviews = ref([
     { id: 1,
-      name: 'James Gandolfini',
+      name: 'Mark D',
       date: '12.04.2023' ,
       rating: "5",
-      content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ea aperiam quibusdam id nam illum vero sapiente maxime laboriosam eos sequi quis exercitationem non amet, ab tempore esse nostrum labore? Dolorem qui nulla et maiores, similique deserunt, blanditiis, officiis voluptas consectetur eius doloremque mollitia voluptate porro quidem! Dolorum molestias aliquid ullam, ipsa officiis eaque, soluta dolorem facere temporibus deserunt error. Cupiditate culpa quidem quaerat, modi minima, iste quis voluptatem id quo natus ad nesciunt aperiam repellat magni. Qui nostrum quia quibusdam, iusto vitae ad incidunt pariatur perspiciatis consectetur hic ea.'
+      content: 'Chosen Elite is a game-changer! My 7-year-old son has been in the youth program for six months, and the transformation is incredible. The coaches make learning fun, and the 1-hour sessions are perfect for his attention span. It\'s amazing to see how much basketball knowledge these kids absorb!'
     },
     { id: 2,
-      name: 'James Gandolfini',
-      date: '12.04.2023' ,
+      name: 'Jason T.',
+      date: '4.17.2024' ,
       rating: "5",
-      content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ea aperiam quibusdam id nam illum vero sapiente maxime laboriosam eos sequi quis exercitationem non amet, ab tempore esse nostrum labore? Dolorem qui nulla et maiores, similique deserunt, blanditiis, officiis voluptas consectetur eius doloremque mollitia voluptate porro quidem! Dolorum molestias aliquid ullam, ipsa officiis eaque, soluta dolorem facere temporibus deserunt error. Cupiditate culpa quidem quaerat, modi minima, iste quis voluptatem id quo natus ad nesciunt aperiam repellat magni. Qui nostrum quia quibusdam, iusto vitae ad incidunt pariatur perspiciatis consectetur hic ea.' 
+      content: 'Team Chosen Elite\'s adult program is intense but exactly what I needed. At 17, I\'m aiming for college basketball, and the coaches here have the experience to push me to the next level. The 2-hour group sessions are a perfect mix of drills and scrimmages. Worth every penny!' 
+    },
+    { id: 3,
+      name: 'Linda K.',
+      date: '8.05.2024' ,
+      rating: "5",
+      content: 'Chosen Elite offers the perfect balance of group training and individual attention. My 14-year-old son benefits from the team dynamics in the amateur group, but the coaches always find time to work on his specific needs. The 2-hour sessions are intense but so rewarding!'
     },
 ])
 
