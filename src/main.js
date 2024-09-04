@@ -7,13 +7,20 @@ import { MotionPlugin } from '@vueuse/motion'
 import VWave from 'v-wave'
 import { createPinia } from 'pinia'
 import './registerServiceWorker'
-import { createHead } from '@unhead/vue
+import { createHead } from '@unhead/vue'
 
 const head = createHead()
 const pinia = createPinia()
 // createApp(App).use(Modals).mount('#app')
 
-createApp(App).use(head).use(router).use(Modals).use(MotionPlugin).use(VWave).use(pinia).mount('#app')
+createApp(App)
+  .use(head)
+  .use(router)
+  .use(Modals)
+  .use(MotionPlugin)
+  .use(VWave)
+  .use(pinia)
+  .mount('#app')
 
 // MENU NAVIGATION-------------------------------------------------------------------------------------------------------
 const nav = document.querySelector('.main-nav')
