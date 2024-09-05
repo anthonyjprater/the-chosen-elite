@@ -25,7 +25,7 @@ const breakpoints = {
 <template>
     <section class="info">
         <h2>Chosen Elite Academy</h2> 
-        <span class="pitch">is the best choice for you</span>
+        <span class="pitch">Premier Basketball Training in the Pacific Northwest</span>
         <div class="carousel-container">
             <carousel :items-to-show="1" :snapAlign=center :breakpoints="breakpoints">
                 <slide v-for="slide in slides" :key="slide.id">
