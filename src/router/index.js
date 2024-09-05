@@ -5,6 +5,7 @@ import ApplyForm from '../views/ApplyForm.vue'
 import ReferencesList from '../views/ReferencesList.vue'
 import ContactView from '../views/ContactView.vue'
 import TrainingGrounds from '../views/TrainingGrounds.vue'
+import DonationsView from '../views/DonationsView.vue'
 import GalleryView from '../views/GalleryView.vue'
 import LatestNews from '../views/LatestNews.vue'
 import TrainingPrograms from '../views/TrainingPrograms.vue'
@@ -94,6 +95,11 @@ const router = createRouter({
       path: '/references',
       name: 'references',
       component: ReferencesList
+    },
+    {
+      path: '/donations',
+      name: 'donations',
+      component: DonationsView
     },
     {
       path: '/contact',

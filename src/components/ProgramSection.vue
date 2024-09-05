@@ -17,35 +17,16 @@ import myProfessionalImg from '@/assets/pro_player.png'
 
   const programsList = ref([
     {
-      'title': 'children',
-      'ages': 'From 6 to 9 years old',
+      'title': 'amateurs',
+      'ages': 'From 4 to 17 years old',
       'days': 'Monday/Thursday/Friday',
-      'time': '3pm-5pm',
+      'time': 'TBD',
+      'location': 'TBD',
       'exceptions': 'Conditions may change',
       'id': '1',
       'image': myYouthImg,
       'path': { name: 'youth' }
-    },
-    {
-      'title': 'amateurs',
-      'ages': 'From 10 to 16 years old',
-      'days': 'Monday/Wednesday/Friday',
-      'time': '6pm-8pm',
-      'exceptions': 'Conditions may change',
-      'id': '2',
-      'image': myAmateurImg,
-      'path': { name: 'amateur' }
-    },
-    {
-      'title': 'professional',
-      'ages': 'Over 17 years old',
-      'days': 'Tuesday/Thursday',
-      'time': '5pm-8pm',
-      'exceptions': 'Conditions may change',
-      'id': '3',
-      'image': myProfessionalImg,
-      'path': { name: 'professional' }
-    },
+    }
     ])
 </script>
 
