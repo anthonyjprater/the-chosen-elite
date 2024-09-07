@@ -44,16 +44,15 @@ function getImageUrl(name, ext) {
         <address>
           <div class="footer-links">
             <div>
-              <a href="mailto:chosen2handle@gmail.com"><i class="fa-solid fa-phone"></i></a>
+              <a href="mailto:chosen2handle@gmail.com"><i class="lni lni-envelope"></i></a>
               <a href="mailto:chosen2handle@gmail.com">chosen2handle@gmail.com</a></div>
             <div>
-              <a href="tel:+4252990864"><i class="fa-regular fa-envelope"></i></a>
+              <a href="tel:+4252990864"><i class="lni lni-phone"></i></a>
               <a href="tel:+4252990864">(425) 299-0864</a></div>
             <div class="social-links">
-              <a href=""><i class="fa-sharp fa-solid fa-paper-plane"></i></a>
-              <a href="https://www.youtube.com/@chosenvideos6007/featured"><i class="fa-brands fa-instagram"></i></a>
-              <a href="https://www.instagram.com/thechosenelitebball/"><i class="fa-brands fa-youtube"></i></a>
-              <a href="https://www.facebook.com/groups/981711689882444/"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="https://www.youtube.com/@chosenvideos6007/featured"><i class="lni lni-youtube"></i></a>
+              <a href="https://www.instagram.com/thechosenelitebball/"><i class="lni lni-instagram-original"></i></a>
+              <a href="https://www.facebook.com/groups/981711689882444/"><i class="lni lni-facebook"></i></a>
             </div>
           </div>
           <div class="copyright">

@@ -45,4 +45,94 @@ h5 {
   padding: 1rem;
 }
 
+h1 {
+  font-size: 1.5rem;
+  text-align: left;
+  text-wrap: balance;
+}
+
+section {
+    background: rgba(47, 47, 47, 1);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    /* justify-content: center; */
+    text-align: left;
+    width: 100vw;
+    padding: 3rem 1.5rem;
+    gap: 1.5rem;
+    background: linear-gradient(0deg, rgba(47,47,47,.7), rgba(0,0,0,1));
+    text-align: left;
+}
+
+section article:not(:last-child) {
+  border-bottom: 2px solid var(--green);
+  /* padding: 1rem; */
+}
+
+section article {
+  padding: 1rem;
+}
+
+
+article {
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+img,h2,h3,p {
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+
+h3 {
+  font-size: 1rem;
+  /* font-weight: normal; */
+  color: var(--green);
+}
+
+@media(min-width: 1200px) {
+  section {
+        padding: 3rem 7.5rem;
+    }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  article {
+  display: flex;
+  flex-flow: row;
+  /* align-items: center; */
+  gap: 4rem;
+  }
+
+  article > * {
+    max-width: 50%;
+  }
+
+  section article {
+  padding: 0;
+}
+
+  img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+
+  div {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+  }
+}
+
 </style>

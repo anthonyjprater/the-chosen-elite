@@ -25,7 +25,7 @@ import myProfessionalImg from '@/assets/pro_player.png'
       'exceptions': 'Conditions may change',
       'id': '1',
       'image': myYouthImg,
-      'path': { name: 'youth' }
+      'path': { name: 'amateur' }
     }
     ])
 </script>
@@ -33,7 +33,7 @@ import myProfessionalImg from '@/assets/pro_player.png'
 <template>
     <section>
         <h2>Our Programs</h2>
-        <p>We have individual programs for children, amateurs, and professionals. Our programs are tailored to the age and skill level of each group.</p>
+        <p>Our programs throughout the year are designed to range all ages and skill levels.</p>
         <div class="card-container">
             <ProgramCard :programs="programsList" />
         </div>

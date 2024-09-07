@@ -27,7 +27,7 @@ const props = defineProps({
 <template>
     <article v-for="program in programs" :key='program.id'>
         <h3>{{ program.title }}</h3>
-        <img :src="program.image" alt="" width="250" height="250">
+        <img :src="program.image" alt="image of team chosen elite player">
         <ul>
             <li>{{ program.ages }}</li>
             <li>{{ program.days }}</li>
@@ -93,4 +93,9 @@ const props = defineProps({
         text-shadow: none;
     }
 
+    @media (min-width: 768px) {
+      article {
+        width: 50%;
+    }
+    }
 </style>
