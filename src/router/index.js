@@ -13,6 +13,9 @@ import AmateurTraining from '../components/programs/AmateurTraining.vue'
 import YouthTraining from '../components/programs/YouthTraining.vue'
 import ProfessionalTraining from '../components/programs/ProfessionalTraining.vue'
 import TeamCoaches from '../views/TeamCoaches.vue'
+import DonationForm from '../components/DonationForm.vue'
+import Success from '../components/Success.vue'
+import Error from '../components/Error.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),

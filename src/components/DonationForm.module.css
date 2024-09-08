@@ -4,7 +4,9 @@
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 8px;
-    background-color: #f9f9f9;
+    color: var(--green);
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 1);
+    letter-spacing: 2px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
@@ -28,6 +30,11 @@
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-block-end: 10px;
   }
   
   .submit-button {
@@ -36,16 +43,26 @@
     padding: 10px;
     background-color: #4caf50;
     color: white;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.7);
+    font-weight: bold;
+    letter-spacing: 1px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 1rem;
+    margin-block-start: 35px;
   }
   
   .submit-button:hover {
     background-color: #45a049;
+    scale: 0.98;
+    outline: 1px solid white;
   }
-  
+
+  .submit-button:active {
+    outline: 5px solid white;
+  }
+
   .message {
     text-align: center;
     margin-top: 20px;

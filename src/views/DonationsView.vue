@@ -1,5 +1,6 @@
 <script setup>
 import MainHeader from '@/components/headers/MainHeader.vue'
+import DonationForm from '@/components/DonationForm.vue'
 
 </script>
 
@@ -24,6 +25,7 @@ import MainHeader from '@/components/headers/MainHeader.vue'
     <p>The Chosen Elite's Tax-ID Number and related documents are available upon request.</p>
     <p>Together, we can ensure that every child has the chance to shine on and off the field.</p>
   </section>
+  <DonationForm />
 </template>
 
 <style scoped>
