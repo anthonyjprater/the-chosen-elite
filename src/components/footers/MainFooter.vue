@@ -1,5 +1,13 @@
 <script setup>
 
+import { ref } from 'vue'
+
+const isActive = ref(false)
+
+const toggleClass = () => {
+  isActive.value = !isActive.value
+}
+
 function getImageUrl(name, ext) {
   return new URL(`../../assets/${name}.${ext}`, import.meta.url).href
 }
@@ -12,8 +20,8 @@ function getImageUrl(name, ext) {
         <div class="footer-nav">
             <ul>
                 <li class="has-sub-menu">
-                  <button class="footer-nav-trigger">General</button>
-                  <ul class="footer-sub-menu">
+                  <button @click="toggleClass" class="footer-nav-trigger">General</button>
+                  <ul class="footer-sub-menu" :class="{ 'active': isActive }">
                     <li><RouterLink :to="{ name: 'references'}">References</RouterLink></li>
                     <li><RouterLink :to="{ name: 'photo-gallery'}">Gallery</RouterLink></li>
                     <li><RouterLink :to="{ name: 'news'}">News</RouterLink></li>
@@ -22,8 +30,8 @@ function getImageUrl(name, ext) {
                   </ul>
                 </li>
                 <li class="has-sub-menu">
-                  <button class="footer-nav-trigger">Programs</button>
-                  <ul class="footer-sub-menu">
+                  <button @click="toggleClass" class="footer-nav-trigger">Programs</button>
+                  <ul class="footer-sub-menu" :class="{ 'active': isActive }">
                     <li><RouterLink :to="{ name: 'youth'}">Children</RouterLink></li>
                     <li><RouterLink :to="{ name: 'amateur'}">Amateur</RouterLink></li>
                     <li><RouterLink :to="{ name: 'professional'}">Advanced</RouterLink></li>
@@ -31,9 +39,9 @@ function getImageUrl(name, ext) {
                   </ul>
                 </li>
                 <li class="has-sub-menu">
-                  <button class="footer-nav-trigger">Academy</button>
+                  <button @click="toggleClass" class="footer-nav-trigger">Academy</button>
                   
-                  <ul class="footer-sub-menu">
+                  <ul class="footer-sub-menu" :class="{ 'active': isActive }">
                       <li><RouterLink :to="{ name: 'about-us' }">About Us</RouterLink></li>
                       <li><RouterLink :to="{ name: 'team-coaches'}">Coaches</RouterLink></li>
                       <li><a href="/merch">Merch</a></li>
@@ -152,6 +160,10 @@ button.footer-nav-trigger {
   align-items: center;
   gap: 1rem;
   padding: 1rem 0;
+}
+
+.active {
+  display:none;
 }
 
 footer address {

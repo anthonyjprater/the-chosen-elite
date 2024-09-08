@@ -11,7 +11,7 @@ function getImageUrl(name, ext) {
         <div>
             <article>
                 <h2>Head coach - Timothy Prater </h2>
-                <p class="headcoach-details">Meet Timothy Prater, a basketball virtuoso hailing from the heart of Louisiana. From a tender age, Timothy's love affair with basketball ignited a flame that would shape his destiny. Fuelled by an unwavering passion and an unyielding work ethic, he embarked on a journey marked by dedication and innovation.</p>
+                <p class="headcoach-details">Meet Timothy Prater, a basketball virtuoso hailing from the heart of Louisiana. From a tender age, Timothy's love affair with basketball ignited a flame that would shape his destiny. Fueled by an unwavering passion and an unyielding work ethic, he embarked on a journey marked by dedication and innovation.</p>
 
 <p>Timothy's basketball journey began as a varsity player in 8th grade, setting the stage for a remarkable career trajectory. Yet, his story transcends mere accolades; it's a testament to his commitment to the game he loves. After years of honing his skills on the court, he felt a calling to give back, to impart his knowledge and expertise to the next generation of hoop dreamers.</p>
 
@@ -21,9 +21,9 @@ function getImageUrl(name, ext) {
 
 <p>As an exceptional basketball trainer, Coach Prater embodies excellence and dedication. His unique blend of expertise and inspiration empowers athletes to transcend their limitations and reach new heights. With a strategic focus on fundamentals and tactical brilliance, he's become a beacon of guidance for aspiring ballers worldwide.</p>
 
-<p>Join Coach Tim on a journey of transformation, where passion meets purpose, and greatness knows no bounds. Elevate your game with the #BasketballCoach #TrainingGuru who's redefining the art of basketball mastery.</p>
+<p>Join Coach Tim on a journey of transformation, where passion meets purpose, and greatness knows no bounds. Elevate your game with the <a href="https://www.instagram.com/chosenhandles">#ChosenHandles</a> #BasketballCoach #TrainingGuru who's redefining the art of basketball mastery.</p>
             </article>
-            <h3>Accomplishments</h3>
+            <!-- <h3>Accomplishments</h3>
             <ul>
                 <li>NBA First Place Cup 2023</li>
                 <li>Coach of the Year</li>
@@ -36,7 +36,7 @@ function getImageUrl(name, ext) {
                 <li>Coach of the Year</li>
                 <li>Coach of the Year</li>
                 <li>Coach of the Year</li>
-            </ul>
+            </ul> -->
         </div>
         <img :src="getImageUrl('coach_tim','png')" alt="" width="320px" height="480px">
         <RouterLink class="sign-up" :to="{ name: 'apply-form'}">Sign up for training</RouterLink>

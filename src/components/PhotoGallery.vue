@@ -43,7 +43,7 @@ const imageList = ref([
         <div class="gallery">
             <figure v-for="(image, index) in imageList" :key="index">
                 <img :src=image alt="" width="605" height="454">
-                <figcaption>Highlights from last weekends tournament</figcaption>
+                <!-- <figcaption>Highlights from last weekends tournament</figcaption> -->
             </figure>
         </div>
     </div>
@@ -70,6 +70,7 @@ figcaption {
 }
 
 img {
-    aspect-ratio: 9/16;
+    width: 100%;
+    height: auto;
 }
 </style>

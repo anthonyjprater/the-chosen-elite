@@ -55,7 +55,7 @@ function closeModal(accept = false) {
 
 <style scoped>
 .viewport-wrapper {
-    --shadow: rgba(0, 0, 0, 0.4);
+    --shadow: rgba(0, 0, 0, 0.9);
     display: flex;
     position: fixed;
     z-index: 10000;

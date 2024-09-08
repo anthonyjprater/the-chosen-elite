@@ -120,6 +120,21 @@ const router = createRouter({
       path: '/news',
       name: 'news',
       component: LatestNews
+    },
+    {
+      path: '/',
+      name: 'donation',
+      component: () => import('@/components/DonationForm.vue')
+    },
+    {
+      path: '/success',
+      name: 'success',
+      component: () => import('@/components/Success.vue')
+    },
+    {
+      path: '/error',
+      name: 'error',
+      component: () => import('@/components/Error.vue')
     }
   ],
   scrollBehavior(to, from, savedPosition) {

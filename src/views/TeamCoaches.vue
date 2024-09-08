@@ -4,33 +4,35 @@ import MainHeader from '@/components/headers/MainHeader.vue';
 import imgUrl from '@/assets/coach_tim.png'
 
 const coachSummary = ref([
-    { id: 1,
-      heading: "Ron Mincy" ,
-      summary: "Ron Mincy is a passionate and seasoned basketball coach with over two decades of experience shaping young athletes into champions. His coaching journey began on the hardwood of local high schools, where he honed his skills and developed a deep love for the game. Known for his strategic brilliance and motivational prowess, John has led several teams to victory in regional championships. His commitment to player development, teamwork, and sportsmanship makes him a respected figure in the basketball community, inspiring the next generation of hoop dreams.",
-      info: [
-        { content: "Training director and Boy’s director for Washington Swarm where he was responsible for mentoring young coaches and trainers"},
-        { content: "Assistant Coach for “Girls Elite Prep” in Issaquah"},
-        { content: "15 + years of experience including coaching teams and leading training with North Sound Titans, Seattle Future, and Jackson HS feeder select"},
-      ]
-    },
-    { id: 2,
-      heading: "Tim Prater" ,
-      summary: "Tim Prater is a passionate and seasoned basketball coach with over two decades of experience shaping young athletes into champions. His coaching journey began on the hardwood of local high schools, where he honed his skills and developed a deep love for the game. Known for his strategic brilliance and motivational prowess, John has led several teams to victory in regional championships. His commitment to player development, teamwork, and sportsmanship makes him a respected figure in the basketball community, inspiring the next generation of hoop dreams.",
-      info: [
-        { content: "Founder Chosen Elite Academy, trainer"},
-        { content: "Head Coach Team Chosen Elite"},
-        { content: "Cascade Middle School Boys Basketball Head Coach"},
-      ]
-    },
-    { id: 3,
-      heading: "Tim Prater" ,
-      summary: "Tim Prater is a passionate and seasoned basketball coach with over two decades of experience shaping young athletes into champions. His coaching journey began on the hardwood of local high schools, where he honed his skills and developed a deep love for the game. Known for his strategic brilliance and motivational prowess, John has led several teams to victory in regional championships. His commitment to player development, teamwork, and sportsmanship makes him a respected figure in the basketball community, inspiring the next generation of hoop dreams.",
-      info: [
-        { content: "Founder Chosen Elite Academy, trainer"},
-        { content: "Head Coach Team Chosen Elite"},
-        { content: "Cascade Middle School Boys Basketball Head Coach"},
-      ]
-    }
+  { id: 1,
+    heading: "Tim Prater" ,
+    summary: "Tim Prater is a passionate and seasoned basketball coach with over two decades of experience shaping young athletes into champions. His coaching journey began on the hardwood of local high schools, where he honed his skills and developed a deep love for the game. Known for his strategic brilliance and motivational prowess, John has led several teams to victory in regional championships. His commitment to player development, teamwork, and sportsmanship makes him a respected figure in the basketball community, inspiring the next generation of hoop dreams.",
+    info: [
+      { content: "Founder Chosen Elite Academy, trainer since 2003"},
+      // { content: "Head Coach Team Chosen Elite"},
+      // { content: "Voyager Middle School Boys Basketball Head Coach"},
+      { content: "Coached and mentored high school athletes who have earned college basketball scholarships to Division I programs."},
+      { content: "Developed comprehensive training programs for professional(NBA, overseas) players, focusing on position-specific skills and overall game improvement."},
+    ]
+  },
+  { id: 2,
+    heading: "Ron Mincy" ,
+    summary: "Ron Mincy is a passionate and seasoned basketball coach with over two decades of experience shaping young athletes into champions. His coaching journey began on the hardwood of local high schools, where he honed his skills and developed a deep love for the game. Known for his strategic brilliance and motivational prowess, John has led several teams to victory in regional championships. His commitment to player development, teamwork, and sportsmanship makes him a respected figure in the basketball community, inspiring the next generation of hoop dreams.",
+    info: [
+      { content: "Training director and Boy’s director for Washington Swarm where he was responsible for mentoring young coaches and trainers"},
+      { content: "Assistant Coach for “Girls Elite Prep” in Issaquah"},
+      { content: "15 + years of experience including coaching teams and leading training with North Sound Titans, Seattle Future, and Jackson HS feeder select"},
+    ]
+  },
+    // { id: 3,
+    //   heading: "Tim Prater" ,
+    //   summary: "Tim Prater is a passionate and seasoned basketball coach with over two decades of experience shaping young athletes into champions. His coaching journey began on the hardwood of local high schools, where he honed his skills and developed a deep love for the game. Known for his strategic brilliance and motivational prowess, John has led several teams to victory in regional championships. His commitment to player development, teamwork, and sportsmanship makes him a respected figure in the basketball community, inspiring the next generation of hoop dreams.",
+    //   info: [
+    //     { content: "Founder Chosen Elite Academy, trainer"},
+    //     { content: "Head Coach Team Chosen Elite"},
+    //     { content: "Cascade Middle School Boys Basketball Head Coach"},
+    //   ]
+    // }
 ])
 </script>
 
@@ -41,8 +43,7 @@ const coachSummary = ref([
         <div>
             <article v-for="coach in coachSummary" :key='coach.id'>
                 <img :src="imgUrl" alt="" />
-                <h2>{{ coach.heading }}</h2>
-                <h3>Main coach</h3>
+                <h2>Coach {{ coach.heading }}</h2>
                 <ul>
                     <li>{{ coach.info[1].content }}</li>
                     <li>{{ coach.info[2].content }}</li>
@@ -64,6 +65,7 @@ h1 {
 
 h2 {
   font-size: 1.2rem;
+  order: 1;
 }
 
 h3 {
@@ -110,14 +112,18 @@ article img {
   width: 100%;
   height: auto;
   margin-bottom: 1rem;
+  order: 0;
 }
 
 article ul {
   margin: 0 0.5rem 1rem;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.8);
+  order: 2;
 }
 
 ul li {
   margin-left: 0.25rem;
+  line-height: 1.75;
 }
 
 li::marker {
@@ -135,6 +141,7 @@ li::marker {
         text-shadow: inherit;
         font-weight: bold;
         letter-spacing: 0.5px;
+        order: 4;
     }
 
     .read-more:hover,
