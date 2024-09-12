@@ -27,7 +27,7 @@
   </template>
   
   <script>
-  import { loadStripe } from '@stripe/stripe-js';
+  // import { loadStripe } from '@stripe/stripe-js';
   import styles from './DonationForm.module.css';
   
   export default {
