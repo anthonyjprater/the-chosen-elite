@@ -69,9 +69,29 @@ div.form-inputs {
   border-radius: 8px;
 }
 
+input {
+  padding: 1rem;
+  width: min(250px, 100%);
+  letter-spacing: 1px;
+  color: #000;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px var(--white);
+  transition: 0.25s ease;
+}
+
 input::placeholder {
-  color: rgba(55, 255, 55);
-  text-shadow: 1px 1px 0px white;
+  color: rgba(55, 255, 55, 0.87);
+  text-shadow: 1px 1px 0px #000;
+  transition: 0.25s ease-in-out;
+}
+
+
+
+input:focus::placeholder,
+input:focus {
+  color: black;
+  text-shadow: 1px 1px 0px #fff;
 }
 
 input:focus {
@@ -83,15 +103,6 @@ div.form-inputs div {
 }
 
 
-input {
-  padding: 1rem;
-  width: min(250px, 100%);
-  letter-spacing: 1px;
-  color: #000;
-  font-size: 1.1rem;
-  font-weight: bold;
-  text-shadow: 1px 1px 1px var(--white);
-}
 
 #name {
   flex-grow: 2;

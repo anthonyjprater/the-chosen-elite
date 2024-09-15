@@ -6,7 +6,7 @@ import ReferencesList from '../views/ReferencesList.vue'
 import ContactView from '../views/ContactView.vue'
 import TrainingGrounds from '../views/TrainingGrounds.vue'
 import DonationsView from '../views/DonationsView.vue'
-import DonationsForm from '../components/DonationsForm.vue'
+// import DonationsForm from '../components/DonationsForm.vue'
 import GalleryView from '../views/GalleryView.vue'
 import LatestNews from '../views/LatestNews.vue'
 import TrainingPrograms from '../views/TrainingPrograms.vue'
@@ -14,6 +14,7 @@ import AmateurTraining from '../components/programs/AmateurTraining.vue'
 import YouthTraining from '../components/programs/YouthTraining.vue'
 import ProfessionalTraining from '../components/programs/ProfessionalTraining.vue'
 import TeamCoaches from '../views/TeamCoaches.vue'
+import CheckoutView from '../views/CheckoutView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -96,6 +97,11 @@ const router = createRouter({
       path: '/references',
       name: 'references',
       component: ReferencesList
+    },
+    {
+      path: '/signup',
+      name: 'signup',
+      component: CheckoutView
     },
     {
       path: '/donations',

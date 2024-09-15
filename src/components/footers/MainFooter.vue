@@ -25,7 +25,7 @@ function getImageUrl(name, ext) {
                     <li><RouterLink :to="{ name: 'references'}">References</RouterLink></li>
                     <li><RouterLink :to="{ name: 'photo-gallery'}">Gallery</RouterLink></li>
                     <li><RouterLink :to="{ name: 'news'}">News</RouterLink></li>
-                    <li><RouterLink :to="{ name: 'contact'}">Contact</RouterLink></li>
+                    <li><RouterLink :to="{ name: 'signup'}">Signup</RouterLink></li>
                     <li><RouterLink :to="{ name: 'training-grounds'}">Training Grounds</RouterLink></li>
                   </ul>
                 </li>
