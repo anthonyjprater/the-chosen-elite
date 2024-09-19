@@ -38,7 +38,7 @@ function getImageUrl(name, ext) {
                 <li>Coach of the Year</li>
             </ul> -->
         </div>
-        <img :src="getImageUrl('coach_tim','png')" alt="" width="320px" height="480px">
+        <img :src="getImageUrl('chosen-elite-basketball-coach-tim','jpg')" alt="" width="320px" height="480px">
         <RouterLink class="sign-up" :to="{ name: 'apply-form'}">Sign up for training</RouterLink>
     </section>
 </template>

@@ -1,11 +1,13 @@
 <script setup>
 import { ref } from 'vue';
 import MainHeader from '@/components/headers/MainHeader.vue';
-import imgUrl from '@/assets/coach_tim.png'
+import imgUrl1 from '@/assets/coach_tim.jpg'
+import imgUrl2 from '@/assets/coach_ron.jpg'
 
 const coachSummary = ref([
   { id: 1,
     heading: "Tim Prater" ,
+    imgUrl: imgUrl1,
     summary: "Tim Prater is a passionate and seasoned basketball coach with over two decades of experience shaping young athletes into champions. His coaching journey began on the hardwood of local high schools, where he honed his skills and developed a deep love for the game. Known for his strategic brilliance and motivational prowess, John has led several teams to victory in regional championships. His commitment to player development, teamwork, and sportsmanship makes him a respected figure in the basketball community, inspiring the next generation of hoop dreams.",
     info: [
       { content: "Founder Chosen Elite Academy, trainer since 2003"},
@@ -17,6 +19,7 @@ const coachSummary = ref([
   },
   { id: 2,
     heading: "Ron Mincy" ,
+    imgUrl: imgUrl2,
     summary: "Ron Mincy is a passionate and seasoned basketball coach with over two decades of experience shaping young athletes into champions. His coaching journey began on the hardwood of local high schools, where he honed his skills and developed a deep love for the game. Known for his strategic brilliance and motivational prowess, John has led several teams to victory in regional championships. His commitment to player development, teamwork, and sportsmanship makes him a respected figure in the basketball community, inspiring the next generation of hoop dreams.",
     info: [
       { content: "Training director and Boy’s director for Washington Swarm where he was responsible for mentoring young coaches and trainers"},
@@ -37,12 +40,12 @@ const coachSummary = ref([
 </script>
 
 <template>
-    <MainHeader /> 
+    <MainHeader />
     <section>
         <h1>Coaches</h1>
         <div>
             <article v-for="coach in coachSummary" :key='coach.id'>
-                <img :src="imgUrl" alt="" />
+                <img :src="coach.imgUrl" alt="" />
                 <h2>Coach {{ coach.heading }}</h2>
                 <ul>
                     <li>{{ coach.info[1].content }}</li>
