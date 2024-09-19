@@ -11,12 +11,12 @@ import MainHeader from '@/components/headers/MainHeader.vue'
         <div class="form-inputs">
         <div>
             <!-- <label for="name">Name:</label> -->
-            <input id="name" v-model="name" name="name" type="text" placeholder="Phone"/>
+            <input id="name" v-model="name" name="name" type="text" placeholder="Name"/>
             <span>{{ nameError }}</span>
         </div>
         <div>
             <!-- <label for="phoneNumber">Phone Number:</label> -->
-            <input id="phoneNumber" v-model="phoneNumber" name="telephone" autocorrect="off" autocomplete="tel" spellcheck="false" type="tel" placeholder="Name"/>
+            <input id="phoneNumber" v-model="phoneNumber" name="telephone" autocorrect="off" autocomplete="tel" spellcheck="false" type="tel" placeholder="Phone"/>
             <span>{{ phoneNumberError }}</span>
         </div>
         <div>
