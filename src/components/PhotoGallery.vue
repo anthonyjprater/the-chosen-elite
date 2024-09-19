@@ -55,7 +55,7 @@ const imageList = ref([
     <div class="container">
         <div class="gallery">
             <figure v-for="(image, index) in imageList" :key="index">
-                <img :src=image alt="" width="605" height="454">
+                <img :src=image alt="" width="300" height="450">
                 <!-- <figcaption>Highlights from last weekends tournament</figcaption> -->
             </figure>
         </div>
