@@ -27,7 +27,7 @@ const props = defineProps({
 <template>
     <article v-for="program in programs" :key='program.id'>
         <h3>{{ program.title }}</h3>
-        <img :src="program.image" alt="image of team chosen elite player">
+        <img loading="lazy" :src="program.image" alt="image of team chosen elite player">
         <ul>
             <li>{{ program.ages }}</li>
             <li>{{ program.days }}</li>

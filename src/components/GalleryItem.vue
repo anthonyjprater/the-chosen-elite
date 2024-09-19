@@ -7,7 +7,7 @@ const props = defineProps({
 </script>
 <template>
     <figure>
-      <img :src="props.image.image" alt="">
+      <img loading="lazy" :src="props.image.image" alt="">
     </figure>
 </template>
 

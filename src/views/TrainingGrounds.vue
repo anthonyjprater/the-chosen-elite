@@ -8,13 +8,13 @@ const locations = ref([
     { id: 1,
       image: courtOne,
       heading: 'Olympic View Middle School' ,
-      text1: "A full-size professional basketball hall is located in the Innovation Center on the 4th floor of the PRO-Trainer Fitness Club. The gym is equipped with everything you need to train children and adults. cozy locker rooms, private lockers for changing and much more are available for Chosen Elite Basketball students.",
+      // text1: "A full-size professional basketball hall is located in the Innovation Center on the 4th floor of the PRO-Trainer Fitness Club. The gym is equipped with everything you need to train children and adults. cozy locker rooms, private lockers for changing and much more are available for Chosen Elite Basketball students.",
       text2: "2602 Mukilteo Speedway, Mukilteo, WA 98275" ,
     },
     { id: 2,
       image: courtTwo,
       heading: 'Discovery Elementary School' ,
-      text1: "A full-size professional basketball hall is located in the Innovation Center on the 4th floor of the PRO-Trainer Fitness Club. The gym is equipped with everything you need to train children and adults. cozy locker rooms, private lockers for changing and much more are available for Chosen Elite Basketball students.",
+      // text1: "A full-size professional basketball hall is located in the Innovation Center on the 4th floor of the PRO-Trainer Fitness Club. The gym is equipped with everything you need to train children and adults. cozy locker rooms, private lockers for changing and much more are available for Chosen Elite Basketball students.",
       text2: "11700 Meridian Ave, Everett, WA 98208" ,
     },
 ])
@@ -26,7 +26,7 @@ const locations = ref([
   <section>
     <h1>Training Grounds</h1>
     <article v-for="location in locations" :key='location.id'>
-      <img :src="location.image" alt="" width="280" height="160">
+      <img loading="lazy" :src="location.image" alt="" width="280" height="160">
       <div>
         <h2>{{ location.heading }}</h2>
             <h3>Description</h3>

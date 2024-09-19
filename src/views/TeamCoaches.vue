@@ -45,7 +45,7 @@ const coachSummary = ref([
         <h1>Coaches</h1>
         <div>
             <article v-for="coach in coachSummary" :key='coach.id'>
-                <img :src="coach.imgUrl" alt="" />
+                <img loading="lazy" :src="coach.imgUrl" alt="" />
                 <h2>Coach {{ coach.heading }}</h2>
                 <ul>
                     <li>{{ coach.info[1].content }}</li>
