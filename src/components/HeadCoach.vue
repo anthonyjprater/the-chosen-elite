@@ -10,7 +10,7 @@ function getImageUrl(name, ext) {
     <section class="headcoach-bio">
         <div>
             <article>
-                <h2>Head coach - Timothy Prater </h2>
+                <h2>Training Director- Timothy Prater </h2>
                 <p class="headcoach-details">Meet Timothy Prater, a basketball virtuoso hailing from the heart of Louisiana. From a tender age, Timothy's love affair with basketball ignited a flame that would shape his destiny. Fueled by an unwavering passion and an unyielding work ethic, he embarked on a journey marked by dedication and innovation.</p>
 
 <p>Timothy's basketball journey began as a varsity player in 8th grade, setting the stage for a remarkable career trajectory. Yet, his story transcends mere accolades; it's a testament to his commitment to the game he loves. After years of honing his skills on the court, he felt a calling to give back, to impart his knowledge and expertise to the next generation of hoop dreamers.</p>
