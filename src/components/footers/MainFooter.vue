@@ -43,7 +43,7 @@ function getImageUrl(name, ext) {
                   
                   <ul class="footer-sub-menu" :class="{ 'active': isActive }">
                       <li><RouterLink :to="{ name: 'about-us' }">About Us</RouterLink></li>
-                      <li><RouterLink :to="{ name: 'team-coaches'}">Coaches</RouterLink></li>
+                      <li><RouterLink :to="{ name: 'team-coaches'}">Trainers</RouterLink></li>
                       <li><a href="/merch">Merch</a></li>
                   </ul>
                 </li>
