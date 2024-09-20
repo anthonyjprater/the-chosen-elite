@@ -88,7 +88,7 @@ const toggleHideSubClassMenu = () => {
                   <ul :class="[{ hidden: isHiddenSub }]" class="sub-menu"  ref="team">
                     <RouterLink :to="{ name: 'home'}">Home</RouterLink>
                     <RouterLink :to="{ name: 'about-us'}">About Us</RouterLink>
-                    <RouterLink :to="{ name: 'team-coaches'}">Coaches</RouterLink>
+                    <RouterLink :to="{ name: 'team-coaches'}">Trainers</RouterLink>
                     <li><a href="#">Merch</a></li>
                   </ul>
                 </li>
