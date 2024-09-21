@@ -42,11 +42,11 @@ const coachSummary = ref([
 <template>
     <MainHeader />
     <section>
-        <h1>Training Directors/h1>
+        <h1>Training Directors</h1>
         <div>
             <article v-for="coach in coachSummary" :key='coach.id'>
                 <img loading="lazy" :src="coach.imgUrl" alt="" />
-                <h2>Coach {{ coach.heading }}</h2>
+                <h2>{{ coach.heading }}</h2>
                 <ul>
                     <li>{{ coach.info[1].content }}</li>
                     <li>{{ coach.info[2].content }}</li>
