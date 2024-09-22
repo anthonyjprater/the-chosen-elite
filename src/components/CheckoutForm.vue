@@ -1,3 +1,7 @@
+<script setup>
+import PaymentLinks from '@/components/PaymentLinks.vue'
+</script>
+
 <template>
     
     <h1>
@@ -35,6 +39,8 @@
     <p>
         We're excited to have you join our training program and can't wait to see you on the court!
     </p>
+    
+    <PaymentLinks />
 
     <p>
         By proceeding to the payment page, you agree to our Terms of Service and Privacy Policy.
