@@ -24,7 +24,10 @@ import MainHeader from '@/components/headers/MainHeader.vue'
             <input id="email" v-model="email" type="email" name="email" autocapitalize="none" autocorrect="off" spellcheck="false" placeholder="Email"/>
             <span>{{ emailError }}</span>
         </div>
-        <input name="_formsubmit_id" type="text" style="display:none">
+       
+            <!-- <label for="message">Message:</label> -->
+            <textarea maxlength="200" cols="100" rows="10" id="message" v-model="message" name="message" autocapitalize="none" autocorrect="off" spellcheck="false" data-ms-editor="true" data-ac-ext="true" placeholder="Message"></textarea>
+        
         </div>
         <p class="privacy-message">By clicking button "send" you agree to the privacy policy and data processing</p>
         <button class="btn-sign-up" type="submit">Submit</button>
@@ -61,7 +64,7 @@ div.form-inputs {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  flex-wrap:  wrap;
+  flex-wrap: wrap;
   gap: 2.5rem;
   padding: 1.5rem 0;
   width: 100%;
@@ -80,7 +83,22 @@ input {
   transition: 0.25s ease;
 }
 
-input::placeholder {
+textarea {
+  padding: 1rem;
+  width: min(250px, 100%);
+  letter-spacing: 1px;
+  color: #000;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px var(--white);
+  transition: 0.25s ease;
+  resize: none;
+  height: 100px;
+}
+
+input::placeholder,
+textarea::placeholder
+{
   color: rgba(55, 255, 55, 0.87);
   text-shadow: 1px 1px 0px #000;
   transition: 0.25s ease-in-out;
@@ -89,12 +107,17 @@ input::placeholder {
 
 
 input:focus::placeholder,
-input:focus {
+input:focus,
+textarea:focus::placeholder,
+textarea:focus
+{
   color: black;
   text-shadow: 1px 1px 0px #fff;
 }
 
-input:focus {
+input:focus,
+textarea:focus
+{
   background-color: rgba(55, 255, 55, 0.87);
 }
 
@@ -139,9 +162,14 @@ p.privacy-message {
     text-shadow: none;
 }
 
+
 @media (min-width: 768px) {
   div.form-inputs {
-    flex-direction: row;
+    flex: row wrap;
+  }
+
+  textarea {
+    width: min(600px, 100%);
   }
 }
 </style>
