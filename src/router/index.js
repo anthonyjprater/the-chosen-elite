@@ -15,6 +15,7 @@ import YouthTraining from '../components/programs/YouthTraining.vue'
 import ProfessionalTraining from '../components/programs/ProfessionalTraining.vue'
 import TeamCoaches from '../views/TeamCoaches.vue'
 import CheckoutView from '../views/CheckoutView.vue'
+import TermsAgreement from '../views/TermsAgreement.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -142,6 +143,11 @@ const router = createRouter({
       path: '/error',
       name: 'error',
       component: () => import('@/components/Error.vue')
+    },
+    {
+      path: '/terms',
+      name: 'terms',
+      component: TermsAgreement
     }
   ],
   scrollBehavior(to, from, savedPosition) {

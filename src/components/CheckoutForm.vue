@@ -42,8 +42,8 @@ import PaymentLinks from '@/components/PaymentLinks.vue'
     
     <PaymentLinks />
 
-    <p>
-        By proceeding to the payment page, you agree to our Terms of Service and Privacy Policy.
+    <p class="terms-acceptance">
+        By proceeding to the payment page, you agree to our <RouterLink to="/terms">Terms of Service</RouterLink> and <RouterLink to="/privacy">Privacy Policy</RouterLink>. You also acknowledge that you have read and understood the Terms of Service and Privacy Policy.
     </p>
 
 </template>
@@ -71,6 +71,16 @@ ul {
 
 li {
     text-align: left;
+}
+
+p.terms-acceptance {
+    font-size: 0.75rem;
+}
+
+a:hover {
+    text-shadow: 1px 1px 1px #000;
+    color: var(--green);
+    text-decoration: none;
 }
 
 </style>
