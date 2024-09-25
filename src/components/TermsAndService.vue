@@ -117,4 +117,8 @@ a {
     text-decoration: underline;
 }
 
+.terms-acceptance input {
+  margin-right: 0.5rem;
+}
+
 </style>
