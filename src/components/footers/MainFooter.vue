@@ -59,7 +59,7 @@ function getImageUrl(name, ext) {
               <a href="tel:+4252990864">(425) 299-0864</a></div>
             <div class="social-links">
               <a href="https://www.youtube.com/@chosenvideos6007/featured"><i class="lni lni-youtube"></i></a>
-              <a href="https://www.instagram.com/chosenhandles/" target="_blank"><i class="lni lni-instagram-original"></i></a>
+              <a href="https://www.instagram.com/reel/C_sQfGlRSE2/?igsh=OW9uaXp4YTRsdTFx/" target="_blank"><i class="lni lni-instagram-original"></i></a>
               <a href="https://www.facebook.com/groups/981711689882444/"><i class="lni lni-facebook"></i></a>
             </div>
           </div>
