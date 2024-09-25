@@ -47,7 +47,7 @@ const sections = ref([
     content: `We may disclose your Personal Information in the good faith belief that such action is necessary to:`,
     items: [
         'Comply with a legal obligation',
-        'Protect and defend the rights or property of [Your Company Name]',
+        'Protect and defend the rights or property of Chosen Elite Academy',
         'Prevent or investigate possible wrongdoing in connection with the Service',
         'Protect the personal safety of users of the Service or the public',
         'Protect against legal liability'
@@ -68,12 +68,13 @@ const sections = ref([
     title: 'Contact Us',
     content: `If you have any questions about this Privacy Policy, please contact us:`,
     items: [
-        'By email: [Your contact email]',
-        'By phone number: [Your contact phone number]',
-        'By mail: [Your physical address]'
+        'By email: chosen2handle@gmail.com',
+        'By phone number: 425-299-0864'
     ]
     }
 ])
+
+
 
 const expandedSections = ref({})
 
@@ -84,10 +85,11 @@ const toggleSection = (sectionId) => {
 </script>
 
 <template>
+  <section class="privacy-section">
     <div class="privacy-policy">
       <h1 id="privacy-policy-title">Privacy Policy</h1>
-      <p>Last updated: [Current Date]</p>
-      <p>[Your Company Name] ("we", "us", or "our") operates [your website URL] (the "Site"). This page informs you of our policies regarding the collection, use, and disclosure of Personal Information we receive from users of the Site.</p>
+      <p>Last updated: 9-25-2024</p>
+      <p>Chosen Elite Academy ("we", "us", or "our") operates TeamChosenElite.com. This page informs you of our policies regarding the collection, use, and disclosure of Personal Information we receive from users of the Site.</p>
   
       <nav aria-label="Privacy Policy Sections">
         <ul>
@@ -126,25 +128,51 @@ const toggleSection = (sectionId) => {
         </div>
       </section>
     </div>
+  </section>
   </template>
   
   <style scoped>
+
+section.privacy-section {
+    background: rgba(47, 47, 47, 1);
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    align-items: baseline;
+    justify-content: center;
+    width: 100vw;
+    padding: 3rem 1.5rem;
+    gap: 1.5rem;
+    background: linear-gradient(0deg, rgba(47,47,47,.7), rgba(0,0,0,1));
+    text-align: left;
+}
+
   .privacy-policy {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    font-family: Arial, sans-serif;
-  }
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 900px;
+    gap: 2rem;
+    padding: 2rem;
+    background: rgba(33, 33, 33, 1);
+    border-radius: 8px;
+    filter: drop-shadow(0px 0px 5px #000);
+    line-height: 1.5;
+}
   
   h1, h2, h3 {
-    color: #333;
+    /* color: #333; */
+    line-height: 2;
+    margin-block-start: 1rem;
   }
   
   button {
     background: none;
     border: none;
     font-size: 1.2em;
-    color: #0056b3;
+    color: var(--green);
+    text-shadow: 1px 1px 1px #000;
     cursor: pointer;
     text-align: left;
     width: 100%;
@@ -155,6 +183,11 @@ const toggleSection = (sectionId) => {
     text-decoration: underline;
   }
   
+  h2 button:focus,
+  h2 button:focus-visible {
+    padding: 1rem;
+  }
+
   ul {
     padding-left: 20px;
   }
@@ -175,5 +208,9 @@ const toggleSection = (sectionId) => {
   
   nav a:hover {
     text-decoration: underline;
+  }
+
+  p {
+    text-shadow: 2px 2px 2px #000;
   }
   </style>

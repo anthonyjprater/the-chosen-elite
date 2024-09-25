@@ -10,6 +10,5 @@ import Footer from '@/components/footers/MainFooter.vue'
 
 <MainHeader />
 <PrivacyPolicy />
-<Footer />
 
 </template>
