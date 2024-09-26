@@ -7,9 +7,9 @@ import NewsFeed from '@/components/NewsFeed.vue';
 <template>
   <MainHeader />
   <section>
-    <h1>News</h1>
+    <!-- <h1>News</h1>
     <h5>Come Back Soon!
-    This Page is Under Construction.</h5>
+    This Page is Under Construction.</h5> -->
     <NewsFeed />
   </section>
 </template>
