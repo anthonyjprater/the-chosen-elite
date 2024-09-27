@@ -17,6 +17,10 @@
     overflow: auto;
 }
 
+h1 {
+    font-size: 1.5rem;
+}
+    
 h1,h2,h3 {
   text-shadow: 1px 1px 1px #000;
   padding: 1rem;
