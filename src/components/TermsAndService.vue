@@ -1,23 +1,39 @@
 <script setup>
 import { ref, onMounted } from 'vue'
+import { useUserStore } from '@/stores/userStore'
+import { storeToRefs } from 'pinia'
 
-const termsAccepted = ref(false)
+
+// const termsAccepted = ref(false)
+// const showFullTerms = ref(false)
+
 const showFullTerms = ref(false)
+    const userStore = useUserStore()
+    const { termsAccepted } = storeToRefs(userStore)
 
-const toggleFullTerms = () => {
-    showFullTerms.value = !showFullTerms.value
-}
+    const toggleFullTerms = () => {
+      showFullTerms.value = !showFullTerms.value
+    }
 
-const acceptTerms = () => {
-    termsAccepted.value = !termsAccepted.value
-    // Here you might want to send this information to your backend or store it in local storage
-    // localStorage.setItem('termsAccepted', termsAccepted.value)
-}
+    const acceptTerms = () => {
+      userStore.setTermsAccepted(!termsAccepted.value)
+      localStorage.setItem('termsAccepted', termsAccepted.value)
+    }
 
-onMounted(() => {
-    // Check if terms have been previously accepted (e.g., from localStorage)
-    // termsAccepted.value = localStorage.getItem('termsAccepted') === 'true'
-    })
+// const toggleFullTerms = () => {
+//     showFullTerms.value = !showFullTerms.value
+// }
+
+// const acceptTerms = () => {
+//     termsAccepted.value = !termsAccepted.value
+//     // Here you might want to send this information to your backend or store it in local storage
+//     localStorage.setItem('termsAccepted', termsAccepted.value)
+// }
+
+// onMounted(() => {
+//     // Check if terms have been previously accepted (e.g., from localStorage)
+//     userStore.termsAccepted = localStorage.getItem('termsAccepted')
+//     })
 
 
 
@@ -73,6 +89,9 @@ onMounted(() => {
               By checking this box, you confirm that you have read, understood, and agree to be bound by our Terms of Service.
             </p>
           </div>
+
+          <RouterLink class="sign-up" :to="{ name: 'signup'}">Sign up for training</RouterLink>
+
         </div>
     </section>
 </template>
@@ -119,6 +138,12 @@ a {
 
 .terms-acceptance input {
   margin-right: 0.5rem;
+}
+
+a.sign-up {
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 </style>

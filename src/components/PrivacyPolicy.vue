@@ -1,6 +1,8 @@
 <script setup>
 
 import { ref } from 'vue'
+import { useUserStore } from '@/stores/userStore'
+import { storeToRefs } from 'pinia'
 
 const sections = ref([
     {
@@ -74,12 +76,16 @@ const sections = ref([
     }
 ])
 
-
-
 const expandedSections = ref({})
+const userStore = useUserStore()
+const { termsAccepted } = storeToRefs(userStore)
 
 const toggleSection = (sectionId) => {
     expandedSections.value[sectionId] = !expandedSections.value[sectionId]
+}
+
+const acceptPrivacyPolicy = () => {
+      userStore.setTermsAccepted(!termsAccepted.value)
 }
 
 </script>
@@ -127,6 +133,22 @@ const toggleSection = (sectionId) => {
           </template>
         </div>
       </section>
+      <div class="privacy-policy-acceptance">
+      <input 
+        type="checkbox" 
+        id="accept-privacy-policy" 
+        :checked="termsAccepted"
+        @change="acceptPrivacyPolicy"
+        aria-describedby="privacy-policy-description"
+      />
+      <label for="accept-privacy-policy">I have read and agree to the Privacy Policy</label>
+      <p id="privacy-policy-description" class="visually-hidden">
+        By checking this box, you confirm that you have read, understood, and agree to our Privacy Policy.
+      </p>
+    </div>
+
+    <RouterLink class="sign-up" :to="{ name: 'signup'}">Sign up for training</RouterLink>
+
     </div>
   </section>
   </template>
@@ -213,4 +235,15 @@ section.privacy-section {
   p {
     text-shadow: 2px 2px 2px #000;
   }
+
+  input {
+    margin-right: 10px;
+  }
+
+  a.sign-up {
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  text-decoration: underline;
+}
   </style>

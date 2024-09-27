@@ -74,13 +74,18 @@ li {
 }
 
 p.terms-acceptance {
-    font-size: 0.75rem;
+    font-size: 0.95rem;
 }
 
-a:hover {
+a {
+    font-weight: bold;
     text-shadow: 1px 1px 1px #000;
     color: var(--green);
     text-decoration: none;
+}
+
+a:hover {
+    color: blue;
 }
 
 </style>

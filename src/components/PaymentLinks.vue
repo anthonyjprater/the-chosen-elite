@@ -24,14 +24,19 @@
         Selected: {{ selectedOption.sessions }} {{ selectedOption.sessions === 1 ? 'Session' : 'Sessions' }} for ${{ selectedOption.price }}
       </p>
       <button v-if="selectedOption" class="payment-button" @click="proceedToPayment">
-        <a :href="`${ proceedToPayment() }`">Proceed to Payment</a>
+        <ConditionalLink 
+        :href="`${ proceedToPayment() }`" 
+        text="Proceed to Payment"
+        />
       </button>
     </div>
   </template>
   
   <script setup>
-  import { computed, ref } from 'vue';
-  
+  import { computed, ref, watch } from 'vue'
+  import ConditionalLink from '@/components/ConditionalLink.vue'
+
+
   // Computed property for upcoming week dates
   const upcomingWeek = computed(() => {
     const today = new Date();
@@ -171,6 +176,15 @@
   
   .payment-button:hover {
     background-color: #007B9A;
+  }
+
+  .payment-button:has(a.disabled):hover {
+    background-color: #008CBA;
+    outline: none;
+  }
+
+  .payment-button:has(a):hover {
+    outline: 2px solid white;
   }
 
   .upcoming-week p {
