@@ -1,6 +1,7 @@
 <script setup>
 import MainHeader from '@/components/headers/MainHeader.vue'
-import NewsFeed from '@/components/NewsFeed.vue';
+// import NewsFeed from '@/components/NewsFeed.vue';
+import VideoGallery from '@/components/VideoGallery.vue';
 
 </script>
 
@@ -10,7 +11,8 @@ import NewsFeed from '@/components/NewsFeed.vue';
     <!-- <h1>News</h1>
     <h5>Come Back Soon!
     This Page is Under Construction.</h5> -->
-    <NewsFeed />
+    <!-- <NewsFeed /> -->
+     <VideoGallery />
   </section>
 </template>
 

@@ -35,12 +35,12 @@ img {
 
 iframe {
     aspect-ratio: 16 / 9;
-    width: 100% !important;
+    width: 100%;
 }
 
 @media (min-width: 768px) {
     iframe {
-        width: 640px !important;
+        width: 640px;
     }
 }
 
