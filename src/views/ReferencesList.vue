@@ -27,6 +27,13 @@ const reviews = ref([
       rating: "5",
       content: 'Chosen Elite offers the perfect balance of group training and individual attention. My 14-year-old son benefits from the team dynamics in the amateur group, but the coaches always find time to work on his specific needs. The 2-hour sessions are intense but so rewarding!'
     },
+    {
+        id: 4,
+        name: 'Melissa G.',
+        date: '9.28.2024' ,
+        rating: "5",
+        content: 'I just have to say my daughter had so much fun yesterday and was so excited about the drills you taught her. She had to show her dad right when we got home last night It\'s nice having a light on our driveway so she could see the hoop. Then she was out in the morning doing the drills for an hour and asked her dad again to do them with her. She even taught her little sister some of her favorites (her sister, made it into the 4th grade select team). She is so excited to learn from you!'
+    }
 ])
 
 const reviewStore = useReviewStore();
