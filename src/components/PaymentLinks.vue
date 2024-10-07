@@ -24,7 +24,7 @@
         Selected: {{ selectedOption.sessions }} {{ selectedOption.sessions === 1 ? 'Session' : 'Sessions' }} for ${{ selectedOption.price }}
       </p>
       <button v-if="selectedOption" class="payment-button" @click="proceedToPayment">
-        <ConditionalLink 
+        <a 
         :href="`${ proceedToPayment() }`" 
         text="Proceed to Payment"
         />
@@ -33,8 +33,8 @@
   </template>
   
   <script setup>
-  import { computed, ref, watch } from 'vue'
-  import ConditionalLink from '@/components/ConditionalLink.vue'
+  import { computed, ref } from 'vue'
+  // import ConditionalLink from '@/components/ConditionalLink.vue'
 
 
   // Computed property for upcoming week dates
