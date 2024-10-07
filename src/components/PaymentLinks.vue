@@ -20,21 +20,29 @@
           ${{ option.price }}
         </button>
       </div>
-      <p class="selected-option" v-if="selectedOption">
+      <button class="selected-option" v-if="selectedOption" @click="proceedToPayment">
         Selected: {{ selectedOption.sessions }} {{ selectedOption.sessions === 1 ? 'Session' : 'Sessions' }} for ${{ selectedOption.price }}
-      </p>
-      <button v-if="selectedOption" class="payment-button" @click="proceedToPayment">
-        <a 
+      </button>
+      <a 
+        :href="`${ proceedToPayment() }`" 
+        text="Proceed to Payment" v-if="selectedOption" class="payment-button">
+        <!-- <a 
         :href="`${ proceedToPayment() }`" 
         text="Proceed to Payment"
-        />
-      </button>
+        /> -->
+    </a>
     </div>
   </template>
   
   <script setup>
   import { computed, ref } from 'vue'
+  import { useUserStore } from '@/stores/userStore'
+  import { storeToRefs } from 'pinia'
   // import ConditionalLink from '@/components/ConditionalLink.vue'
+
+
+  const userStore = useUserStore()
+  const { termsAccepted } = storeToRefs(userStore)
 
 
   // Computed property for upcoming week dates
@@ -70,6 +78,10 @@
   }
   
   function proceedToPayment() {
+
+    userStore.setTermsAccepted(!termsAccepted.value)
+    localStorage.setItem('termsAccepted', termsAccepted.value)
+
     // Here you would implement the logic to redirect to the payment form
     // For now, we'll just log the selected option
     // console.log('Proceeding to payment for:', selectedOption.value.sessions,' sessions');
@@ -175,16 +187,11 @@
   }
   
   .payment-button:hover {
-    background-color: #007B9A;
-  }
+    background-color: white;
+    color: #008CBA;
+    outline: 3px solid #008CBA;
+    font-weight: bold;
 
-  .payment-button:has(a.disabled):hover {
-    background-color: #008CBA;
-    outline: none;
-  }
-
-  .payment-button:has(a):hover {
-    outline: 2px solid white;
   }
 
   .upcoming-week p {
