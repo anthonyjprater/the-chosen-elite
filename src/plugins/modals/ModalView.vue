@@ -1,6 +1,7 @@
 <script setup>
 import { inject, computed } from "vue"                 //1
 
+
 const
 
 $props = defineProps({                                 //2
@@ -19,10 +20,19 @@ _show = computed(() => {                               //4
 
 })
 
+const emit = defineEmits(['reviewSubmit'])
+
 function closeModal(accept = false) {
+    // console.log(`store.name is ${store.name} store.rating is ${store.rating} store.review is ${store.review}`)
 
     accept?$modals.accept():$modals.cancel()           //5
 
+}
+
+
+function submitReview() {
+  emit('reviewSubmit')
+  closeModal(true)
 }
 
 </script>
@@ -42,7 +52,7 @@ function closeModal(accept = false) {
         
             <footer>
             
-                <button @click="closeModal(true)">Submit</button>
+                <button @click="submitReview">Submit</button>
             
                 <button @click="closeModal(false)">Cancel</button>
         
