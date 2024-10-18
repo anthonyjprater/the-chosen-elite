@@ -1,13 +1,15 @@
 <script setup>
 import MainHeader from '@/components/headers/MainHeader.vue'
 
+const formSubmitKey = import.meta.env.VITE_FORM_SUBMIT_KEY
+
 </script>
 <template>
 <MainHeader />
 <section>
     <h2 class="hign-up">Sign up for training</h2>
     <p>Leave your contacts and we will call you back</p>
-    <form id="contactform" action="https://formsubmit.co/9b9e48d59e19046decb17ae387212c79" method="POST">
+    <form id="contactform" action="https://formsubmit.co/{{ formSubmitKey }}" method="POST">
         <div class="form-inputs">
         <div>
             <!-- <label for="name">Name:</label> -->
