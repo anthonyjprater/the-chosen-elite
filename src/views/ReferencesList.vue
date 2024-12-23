@@ -127,7 +127,7 @@ const callback = async () => {
 
     try{
 
-        await axios.post('http://localhost:5000/api/reviews', { name: name, date: today, id: id, rating: rating, content: content })
+        await axios.post('https://chosen-elite-fs.onrender.com/api/reviews', { name: name, date: today, id: id, rating: rating, content: content })
         
         console.log(name, date, id, rating, content)
     } catch (err) {
