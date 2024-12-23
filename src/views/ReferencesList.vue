@@ -63,7 +63,10 @@ const formattedDate = computed(() => {
 
 const fetchData = async () => {
     try {
-        const response = await axios.get('http://localhost:5000/api/reviews', {headers: { 'Content-Type': 'application/json' }})
+        const response = await axios.get(
+            //'http://localhost:5000/api/reviews'
+            'https://chosen-elite-fs.onrender.com/api/reviews'
+            , {headers: { 'Content-Type': 'application/json' }})
         reviews.value = response.data
         console.log(response.data)
     } catch (err) {
