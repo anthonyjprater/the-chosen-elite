@@ -47,16 +47,16 @@ const userStore = useUserStore()
 const { termsAccepted } = storeToRefs(userStore)
 
 const PAYMENT_LINKS = {
-  1: 'https://book.stripe.com/dR615sd9018A3IY4gg',
-  10: 'https://book.stripe.com/28o15s6KCcRi2EUcMP',
-  20: 'https://book.stripe.com/eVaeWi5Gy8B2djyeUW',
+  1: 'https://buy.stripe.com/8wM7tQglc8B2djy6os',
+  10: 'https://buy.stripe.com/cN2g0m6KC04wfrGdQV',
+  20: 'https://buy.stripe.com/dR66pMb0SbNe93ieV0',
   default: 'https://teamchosenelite.com/signup'
 }
 
 const sessionOptions = [
-  { sessions: 1, price: 20 },
-  { sessions: 10, price: 150 },
-  { sessions: 20, price: 300 },
+  { sessions: 1, price: 25 },
+  { sessions: 10, price: 200 },
+  { sessions: 20, price: 340 },
 ]
 
 const selectedOption = ref(null)
