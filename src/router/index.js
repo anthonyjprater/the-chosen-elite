@@ -17,6 +17,7 @@ import TeamCoaches from '../views/TeamCoaches.vue'
 import CheckoutView from '../views/CheckoutView.vue'
 import TermsAgreement from '../views/TermsAgreement.vue'
 import PrivacyPage from '../views/PrivacyPage.vue'
+import TryoutsPage from '../views/TryoutsPage.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -154,6 +155,11 @@ const router = createRouter({
       path: '/privacy',
       name: 'privacy',
       component: PrivacyPage
+    }
+    ,
+    { path: '/tryouts',
+      name: 'tryouts',
+      component: TryoutsPage
     }
   ],
   scrollBehavior(to, from, savedPosition) {

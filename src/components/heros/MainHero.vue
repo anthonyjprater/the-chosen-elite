@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 import MainHeader from '../headers/MainHeader.vue'
+import TryoutsLink from '../links/TryoutsLink.vue'
 
 const transparent = ref(true)
 
@@ -11,6 +12,7 @@ const transparent = ref(true)
     <MainHeader :isTransparent="transparent"/>
     <h2 class="hero-headline">Train Your Mind and Body for Basketball Success</h2>
     <button class="sign-up">Sign up for training</button>
+    <TryoutsLink />
   </div>
 </template>
 

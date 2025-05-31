@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 import MainHeader from './MainHeader.vue'
+import TryoutsLink from '../links/TryoutsLink.vue';
 
 const transparent = ref(true)
 
@@ -41,7 +42,11 @@ console.log(bgImage)
         opacity: 1,
         y: 0,
       }" >{{ title }}</h2>
-    <RouterLink class="sign-up" :to="{ name: 'apply-form'}">Sign up for training</RouterLink>
+    <div class="links">
+      <RouterLink class="sign-up" :to="{ name: 'apply-form'}">Sign up for training</RouterLink>
+      <TryoutsLink />
+    </div>
+
   </div>
 </template>
 
@@ -104,8 +109,35 @@ h2.hero-headline {
 }
 
 .main-nav ul {
-  background-color: none;
+  background-color: transparent;
 }
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+.links > a {
+  width: 100%;
+  text-align: center;
+}
+.links > a:hover {
+  scale: 0.95;
+  color: rgba(255, 255, 255, 1);
+  text-shadow: none;
+}
+.links > a:focus-visible {
+  scale: 0.95;
+  color: rgba(255, 255, 255, 1);
+  text-shadow: none;
+}
+.links > a.sign-up {
+  padding: 1em 1.5em;
+}
+.links > a.tryouts {
+  padding: 0.35em 1em;
+}       
 
 @media (min-width: 768px) {
   .main-hero {
