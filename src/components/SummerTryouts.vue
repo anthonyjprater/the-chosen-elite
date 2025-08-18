@@ -1,7 +1,7 @@
 <template>
   <div class="tryouts">
     <h1 class="title">THE CHOSEN ELITE</h1>
-    <h2 class="subtitle">Girls & Boys Summer</h2>
+    <h2 class="subtitle">Boys</h2>
     <h1 class="main-title">BASKETBALL TRYOUTS</h1>
     <div>
         <p class="details">September 9, Voyager Middle School</p>
