@@ -4,9 +4,11 @@
     <h2 class="subtitle">Girls & Boys Summer</h2>
     <h1 class="main-title">BASKETBALL TRYOUTS</h1>
     <div>
-        <p class="details">June 6, Mariner High School</p>
-        <p class="details">4<sup>th</sup> & 5<sup>th</sup> grade 6:00 - 6:45</p>
-        <p class="details">6<sup>th</sup> - 8<sup>th</sup> grade 7:00 - 7:45</p>
+        <p class="details">September 9, Voyager Middle School</p>
+        <p class="details">11711 4th Avenue West, Everett, WA 98204
+        <p class="details">DOORS OPEN @ 5:45pm
+        <p class="details">4<sup>th</sup> - 6<sup>th</sup> grade 6:00pm - 7:00pm</p>
+        <p class="details">7<sup>th</sup> - 8<sup>th</sup> grade 7:00pm - 8:00pm</p>
         <p class="details">200 120<sup>th</sup> St SW Everett, WA 98204</p>
     </div>
     
