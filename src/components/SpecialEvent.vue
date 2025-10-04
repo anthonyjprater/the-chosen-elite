@@ -43,7 +43,7 @@
       <div class="event-details">
         <ul>
           <li><strong>Date:</strong> Saturday, October 18, 2025</li>
-          <li><strong>Time:</strong> 6:00 PM – 9:00 PM</li>
+          <li><strong>Time:</strong> 11:00 AM – 3:00 PM</li>
           <li><strong>Location:</strong> Mariner High School Gymnasium, 200 120<sup>st</sup> SW, Everett, WA 98203</li>
           <li><strong>Target Audience:</strong> Aspiring basketball players grades 6-12 (all skill levels welcome)</li>
           <li><strong>Cost:</strong> $50 per participant<br>
