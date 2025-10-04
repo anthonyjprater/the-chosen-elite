@@ -50,7 +50,7 @@
           <option value="19">19</option>
         </select>
       </div>
-      <input type="hidden" name="_template" value="box">git push
+      <input type="hidden" name="_template" value="box">
       <input type="hidden" name="_subject" value="New submission for Elite Dream Camp 2025!">
       <input type="hidden" name="_autoresponse" value="Thank you for signing up for the Fall Camp!">
       <input type="hidden" name="_next" value="https://buy.stripe.com/fZucN5gGoflR9WR6JsfIs07">
