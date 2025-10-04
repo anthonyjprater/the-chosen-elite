@@ -1,44 +1,8 @@
 <template>
-  <div class="tryouts">
-    <h1 class="title">THE CHOSEN ELITE</h1>
-    <h2 class="subtitle">Boys</h2>
-    <h1 class="main-title">BASKETBALL TRYOUTS</h1>
-    <div>
-        <p class="details">September 9, Voyager Middle School</p>
-        <p class="details">11711 4th Avenue West, Everett, WA 98204</p>
-        <p class="details">DOORS OPEN @ 5:45pm</p>
-        <p class="details">4<sup>th</sup> - 6<sup>th</sup> grade 6:00pm - 7:00pm</p>
-        <p class="details">7<sup>th</sup> - 8<sup>th</sup> grade 7:00pm - 8:00pm</p>
-        <p class="details">200 120<sup>th</sup> St SW Everett, WA 98204</p>
-    </div>
-    
-    <form id="contactform" action="https://formsubmit.co/chosen2handle@gmail.com" method="POST" class="signup-form" aria-label="Basketball Tryouts Signup">
-      <div class="form-group">
-        <label for="name">Name:</label>
-        <input type="text" id="name" v-model="name" name="name" required aria-required="true" aria-label="Name">
-      </div>
-      <div class="form-group">
-        <label for="email">Email:</label>
-        <input type="email" id="email" v-model="email" name="email" required aria-required="true" aria-label="Email">
-      </div>
-      <div class="form-group">
-        <label for="phone">Phone:</label>
-        <input type="tel" id="phone" v-model="phone" name="phone" required aria-required="true" aria-label="Phone">
-      </div>
-      <div class="form-group">
-        <label for="grade">Grade:</label>
-        <select id="grade" v-model="grade" name="grade" required aria-required="true" aria-label="Grade">
-          <option value="4th">4th</option>
-          <option value="5th">5th</option>
-          <option value="6th">6th</option>
-          <option value="7th">7th</option>
-          <option value="8th">8th</option>
-        </select>
-      </div>
-      <button type="submit" aria-label="Submit">Sign Up</button>
-    </form>
-  </div>
+ 
 </template>
+
+  
 
 <script setup>
 import { ref } from 'vue';
@@ -158,8 +122,8 @@ button {
   cursor: pointer;
   transition: scale 0.1s, color 0.1s;
 }
+  
 
-button:hover,
 button:focus-visible {
   scale: 0.95;
   color: rgba(0, 0, 0, 0.5);

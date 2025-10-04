@@ -18,6 +18,8 @@ import CheckoutView from '../views/CheckoutView.vue'
 import TermsAgreement from '../views/TermsAgreement.vue'
 import PrivacyPage from '../views/PrivacyPage.vue'
 import TryoutsPage from '../views/TryoutsPage.vue'
+import SpecialEvent from '../views/SpecialEventPage.vue'
+import EventSignUp from '../views/EventSignUpPage.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -157,9 +159,20 @@ const router = createRouter({
       component: PrivacyPage
     }
     ,
-    { path: '/tryouts',
+    { 
+      path: '/tryouts',
       name: 'tryouts',
       component: TryoutsPage
+    },
+    { 
+      path: '/specialevent',
+      name: 'specialevent',
+      component: SpecialEvent
+    },
+    {
+      path: '/eventsignup',
+      name: 'eventsignup',
+      component: EventSignUp
     }
   ],
   scrollBehavior(to, from, savedPosition) {

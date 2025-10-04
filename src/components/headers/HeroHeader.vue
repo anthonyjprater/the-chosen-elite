@@ -1,7 +1,8 @@
 <script setup>
 import { ref } from 'vue'
 import MainHeader from './MainHeader.vue'
-import TryoutsLink from '../links/TryoutsLink.vue';
+import TryoutsLink from '../links/TryoutsLink.vue'
+import SpecialEventLink from '../links/SpecialEventLink.vue'
 
 const transparent = ref(true)
 
@@ -44,7 +45,7 @@ console.log(bgImage)
       }" >{{ title }}</h2>
     <div class="links">
       <RouterLink class="sign-up" :to="{ name: 'apply-form'}">Sign up for training</RouterLink>
-      <TryoutsLink />
+      <SpecialEventLink class="pulse-link" />
     </div>
 
   </div>
@@ -137,7 +138,53 @@ h2.hero-headline {
 }
 .links > a.tryouts {
   padding: 0.35em 1em;
-}       
+}
+
+.pulse-link {
+  display: inline-block;
+  margin-top: 1.2rem;
+  padding: 0.75em 2em;
+  border: 3px solid #fff;
+  border-radius: 2em;
+  background: #1a237e;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-decoration: none;
+  box-shadow: 0 0 0 0 #fff;
+  animation: pulse-border 750ms infinite;
+  animation: pulse-border2 1000ms infinite;
+  transition: background 0.2s, color 0.2s;
+}
+.pulse-link:hover, .pulse-link:focus {
+  background: #fff;
+  color: #1a237e;
+}
+
+@keyframes pulse-border {
+  0% {
+    box-shadow: 0 0 0 5px rgba(255,255,255,0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 20px rgba(255,255,255,0);
+  }
+  100% {
+    box-shadow: 0 0 0 30px rgba(255,255,255,0);
+  }
+}
+
+@keyframes pulse-border2 {
+  0% {
+    box-shadow: 0 0 0 5px rgba(255,255,255,0.7);
+  }
+  40% {
+    box-shadow: 0 0 0 20px rgba(255,255,255,0);
+  }
+  70% {
+    box-shadow: 0 0 0 30px rgba(255,255,255,0);
+  }
+}
+
 
 @media (min-width: 768px) {
   .main-hero {
