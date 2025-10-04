@@ -339,6 +339,10 @@ button:focus-visible {
 
 /* Responsive styles */
 @media (max-width: 600px) {
+
+  .event-container {
+    max-width: 270px;
+  }
   .tryouts {
     padding: 1rem 0.25rem;
     gap: 1.25rem;
