@@ -54,7 +54,7 @@
       <input type="hidden" name="_subject" value="New submission for Elite Dream Camp 2025!">
       <input type="hidden" name="_autoresponse" value="Thank you for signing up for the Fall Camp!">
       <input type="hidden" name="_next" value="https://buy.stripe.com/fZucN5gGoflR9WR6JsfIs07">
-      <input type="hidden" name="_cc" value="prater.anthony.j@outlook.com">
+      <input type="hidden" name="_cc" value="prater.anthony.j@outlook.com,prater.anthony.j@gmail.com">
       <button type="submit" aria-label="Submit">Sign Up</button>
     </form>
   </div>
