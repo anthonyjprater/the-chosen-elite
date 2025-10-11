@@ -33,9 +33,9 @@
 
     <h3>Event Highlights</h3>
     <ul>
-      <li><strong>Master Class Session:</strong> Participate in a focused training session led by <span class="highlight">[Celebrity Trainer Name]</span>, covering advanced drills and game strategies.</li>
+      <li><strong>Master Class Session:</strong> Participate in a focused training session led by <span class="highlight">{{ trainerName }}</span>, covering advanced drills and game strategies.</li>
       <li><strong>Q&amp;A Session:</strong> Get your questions answered directly by the expert during an interactive Q&amp;A.</li>
-      <li><strong>Meet &amp; Greet:</strong> A unique opportunity to meet <span class="highlight">[Celebrity Trainer Name]</span> and get a photo.</li>
+      <li><strong>Meet &amp; Greet:</strong> A unique opportunity to meet <span class="highlight">{{ trainerName }}</span> and get a photo.</li>
       <li><strong>Exclusive Tips &amp; Techniques:</strong> Learn the secrets and methodologies used to train elite athletes.</li>
     </ul>
 
@@ -85,7 +85,7 @@
 import { ref } from 'vue';
 
 // Trainer or group name goes here
-const trainerName = ref('Drew Hanlen');
+const trainerName = ref('Coach Tone');
 // Sponsor Name
 const sponsorName = ref('Nike Hoops Summit')
 
