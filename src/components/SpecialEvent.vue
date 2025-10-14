@@ -43,8 +43,8 @@
       <div class="event-details">
         <ul>
           <li><strong>Date:</strong> Saturday, October 18, 2025</li>
-          <li><strong>Time:</strong> 11:00 AM – 3:00 PM</li>
-          <li><strong>Location:</strong> Mariner High School Gymnasium, 200 120<sup>st</sup> SW, Everett, WA 98203</li>
+          <li><strong>Times:</strong><br> 11:00 AM – 1:00 PM (Grades 6th-8th)<br> 1:15 PM - 3:15PM (Grades 9th-12th)</li>
+          <li><strong>Location:</strong> Voyager Middle School Gymnasium, 11711 4th Ave W, Everett, WA 98204</li>
           <li><strong>Target Audience:</strong> Aspiring basketball players grades 6-12 (all skill levels welcome)</li>
           <li><strong>Cost:</strong> $50 per participant<br>
             <span style="color:#37ff37;font-weight:bold;">
