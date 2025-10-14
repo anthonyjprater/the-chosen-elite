@@ -4,7 +4,7 @@
     <h2>Elevate your game with Coach Tone</h2>
 
     <figure>
-      <img :src="getImageUrl('elite-dream','jpg')" alt="" width="270px" height="480px">
+      <img :src="getImageUrl('elite-dream-1','jpg')" alt="" width="270px" height="480px">
     </figure>
 
     <div>
