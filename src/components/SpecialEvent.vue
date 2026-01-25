@@ -1,12 +1,14 @@
 <template>
   <section class="event-container">
-    <h1><span class="chosen">Team Chosen Elite Tryouts</span></h1>
+    <h1><span class="chosen">
 
     <a class="pulse-link" href="https://docs.google.com/forms/d/e/1FAIpQLSdrbV-SoT9uTzYbK53RxxSNTs2552oskBjNFd2Qz4iEa6Zkug/viewform">
       <figure>
         <img :src="getImageUrl('chosen_tryouts','jpg')" alt="fall basketball camp flyer" width="340px" height="604px">
       </figure>
     </a>
+    <br>
+    Team Chosen Elite Tryouts</span></h1>
 
     <div>
        
@@ -177,6 +179,7 @@ button {
 }
 
 .chosen {
+
   color: var(--green, #37ff37);
 }
 
