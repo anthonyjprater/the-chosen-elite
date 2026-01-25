@@ -1,83 +1,31 @@
 <template>
   <section class="event-container">
-    <h1><span class="chosen">Team Chosen Elite</span> &amp; <span class="dream">Dream Basketball</span> <br>Present:<br> <span class="highlight">The <span class="elite-dream">Elite Dream</span> Fall Camp</span></h1>
-    <h2>Elevate your game with Coach Tone</h2>
+    <h1><span class="chosen">Team Chosen Elite Tryouts</span></h1>
 
     <figure>
-      <img :src="getImageUrl('elite-dream-1','jpg')" alt="fall basketball camp flyer" width="270px" height="480px">
+      <img :src="getImageUrl('chosen_tryouts','jpg')" alt="fall basketball camp flyer" width="750px" height="1112px">
     </figure>
 
     <div>
-       <RouterLink
-       href="#register"
-       class="pulse-link"
-       rel="noopener"
-       :to="{ name: 'eventsignup'}">
-        Register Now
-      </RouterLink>
+       
       <div class="note">
-        <p>Note: Participants are encouraged to arrive 30 minutes prior to their session start time for check-in.
+        <p>Note: Participants are encouraged to arrive 10 minutes prior to their session start time for check-in.
         For inquiries, please contact us at <a href="tel:+4252990864">425-299-0864</a> or <a href="mailto:chosen2handle@gmail.com">chosen2handle@gmail.com</a>.</p>
       </div>
     </div>
 
-    <p>
-      Get ready for an exclusive opportunity to learn from the best! <span class="highlight">Team Chosen Elite</span>, in partnership with <span class="highlight">Dream Basketball</span>, is thrilled to announce a special training event featuring the renowned basketball skills trainer, <span class="highlight">Antonio "Tone" Ortega</span>, also known as Coach Tone.
-    </p>
-    <p>
-      Follow Coach Tone on Instagram at <a href="https://instagram.com/_coach.tone" target="_blank" rel="noopener" class="highlight">@_coach.tone</a> and check out Dream Basketball at <a href="https://instagram.com/dream.basketball_" target="_blank" rel="noopener" class="highlight">@dream.basketball_</a>.
-    </p>
-    <p>
-      This is your chance to gain invaluable insights, refine your technique, and get motivated by a trainer who has worked with some of the top players in the country. <span class="highlight">Coach Tone</span> will share his expertise in a dynamic session designed to push your game to the next level.
-    </p>
 
-    <h3>Event Highlights</h3>
-    <ul>
-      <li><strong>Master Class Session:</strong> Participate in a focused training session led by <span class="highlight">{{ trainerName }}</span>, covering advanced drills and game strategies.</li>
-      <li><strong>Q&amp;A Session:</strong> Get your questions answered directly by the expert during an interactive Q&amp;A.</li>
-      <li><strong>Meet &amp; Greet:</strong> A unique opportunity to meet <span class="highlight">{{ trainerName }}</span> and get a photo.</li>
-      <li><strong>Exclusive Tips &amp; Techniques:</strong> Learn the secrets and methodologies used to train elite athletes.</li>
-    </ul>
 
     <h3>Event Details</h3>
       <div class="event-details">
         <ul>
-          <li><strong>Date:</strong> Saturday, October 18, 2025</li>
-          <li><strong>Times:</strong><br> 11:00 AM – 1:00 PM (Grades 6th-8th)<br> 1:15 PM - 3:15PM (Grades 9th-12th)</li>
+          <li><strong>Date:</strong> Sunday, February 22, 2026</li>
+          <li><strong>Times:</strong><br> 1:00 PM – 2:00 PM (Grades 5th-6th)<br> 2:00 PM - 3:00PM (Grades 7th-8th)</li>
           <li><strong>Location:</strong> Voyager Middle School Gymnasium, 11711 4th Ave W, Everett, WA 98204</li>
-          <li><strong>Target Audience:</strong> Aspiring basketball players grades 6-12 (all skill levels welcome)</li>
-          <li><strong>Cost:</strong> $50 per participant<br>
-            <span style="color:#37ff37;font-weight:bold;">
-              <strong>Capacity:</strong> Limited to 40 participants
-            </span>
-          </li>
+          
         </ul>
       </div>
-    <h3>Why train with a celebrity trainer?</h3>
-    <ul>
-      <li><strong>Gain a competitive edge:</strong> Learn advanced techniques and strategies that can elevate your game and give you an advantage.</li>
-      <li><strong>Boost confidence:</strong> Develop skills and gain confidence in your abilities through specialized instruction.</li>
-      <li><strong>Deepen game understanding:</strong> Gain insights into the nuances and strategies of basketball that may be overlooked in typical group settings.</li>
-      <li><strong>Personalized attention:</strong> While not fully one-on-one, this event offers a unique chance to observe and learn closely from a top professional.</li>
-    </ul>
-
-    <div class="cta">
-      <p><strong>Don't miss this opportunity!</strong></p>
-      <p>Spaces are limited for this exclusive event. Secure your spot today and train with a legend!</p>
-      
-      <RouterLink
-       href="#register"
-       class="pulse-link"
-       rel="noopener"
-       :to="{ name: 'eventsignup'}">
-        Register
-      </RouterLink>
-      
-      <div class="note">
-        <p>Note: Participants are encouraged to arrive 30 minutes prior to their session start time for check-in.
-        For inquiries, please contact us at 425-299-0864 or chosen2handle@gmail.com.</p>
-      </div>
-    </div>
+    
   </section>
 </template>
 
