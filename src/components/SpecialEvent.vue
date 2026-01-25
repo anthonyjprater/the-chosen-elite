@@ -2,9 +2,11 @@
   <section class="event-container">
     <h1><span class="chosen">Team Chosen Elite Tryouts</span></h1>
 
-    <figure>
-      <img :src="getImageUrl('chosen_tryouts','jpg')" alt="fall basketball camp flyer" width="750px" height="1112px">
-    </figure>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdrbV-SoT9uTzYbK53RxxSNTs2552oskBjNFd2Qz4iEa6Zkug/viewform">
+      <figure>
+        <img :src="getImageUrl('chosen_tryouts','jpg')" alt="fall basketball camp flyer" width="640px" height="949px">
+      </figure>
+    </a>
 
     <div>
        
