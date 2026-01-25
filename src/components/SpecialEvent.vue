@@ -2,9 +2,9 @@
   <section class="event-container">
     <h1><span class="chosen">Team Chosen Elite Tryouts</span></h1>
 
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdrbV-SoT9uTzYbK53RxxSNTs2552oskBjNFd2Qz4iEa6Zkug/viewform">
+    <a class="pulse-link" href="https://docs.google.com/forms/d/e/1FAIpQLSdrbV-SoT9uTzYbK53RxxSNTs2552oskBjNFd2Qz4iEa6Zkug/viewform">
       <figure>
-        <img :src="getImageUrl('chosen_tryouts','jpg')" alt="fall basketball camp flyer" width="270px" height="480px">
+        <img :src="getImageUrl('chosen_tryouts','jpg')" alt="fall basketball camp flyer" width="340px" height="604px">
       </figure>
     </a>
 
