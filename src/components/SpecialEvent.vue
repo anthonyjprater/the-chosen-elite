@@ -2,13 +2,13 @@
   <section class="event-container">
     <h1><span class="chosen">
 
-    <a class="pulse-link" href="https://docs.google.com/forms/d/e/1FAIpQLSdrbV-SoT9uTzYbK53RxxSNTs2552oskBjNFd2Qz4iEa6Zkug/viewform">
+    <a class="pulse-link" href="https://buy.stripe.com/14AeVd9dW7Tp5GBebUfIs08">
       <figure>
-        <img :src="getImageUrl('chosen_tryouts','jpg')" alt="fall basketball camp flyer" width="340px" height="604px">
+        <img :src="getImageUrl('breakout-camp','jpg')" alt="breakout basketball camp flyer" width="340px" height="604px">
       </figure>
     </a>
     <br>
-    Team Chosen Elite Tryouts</span></h1>
+    Team Chosen Elite Breakout Spring Camp 2026</span></h1>
 
     <div>
        
@@ -23,9 +23,9 @@
     <h3>Event Details</h3>
       <div class="event-details">
         <ul>
-          <li><strong>Date:</strong> Sunday, February 22, 2026</li>
-          <li><strong>Times:</strong><br> 1:00 PM – 2:00 PM (Grades 5th-6th)<br> 2:00 PM - 3:00PM (Grades 7th-8th)</li>
-          <li><strong>Location:</strong> Voyager Middle School Gymnasium, 11711 4th Ave W, Everett, WA 98204</li>
+          <li><strong>Date:</strong> Saturday, March 14, 2026</li>
+          <li><strong>Times:</strong><br> 12:00 PM – 2:00 PM (Grades 5th-8th)<br> 2:15 PM - 4:15PM (Grades 9th-12th)</li>
+          <li><strong>Location:</strong> Mariner High School Gymnasium, 200 120th Street SW, Everett, WA 98204</li>
           
         </ul>
       </div>
