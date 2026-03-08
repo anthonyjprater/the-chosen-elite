@@ -240,7 +240,7 @@ button {
   padding: 0.75em 2em;
   border: 3px solid #fff;
   border-radius: 2em;
-  background: #1a237e;
+  background: #000;
   color: #fff;
   font-weight: bold;
   font-size: 1.1rem;
