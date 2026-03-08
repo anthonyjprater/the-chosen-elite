@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <RouterLink class="sign-up" :to="{ name: 'specialevent'}">Pre-Register for Tryouts</RouterLink>
+    <RouterLink class="sign-up" :to="{ name: 'specialevent'}">2026 Spring Breakout Camp</RouterLink>
 </template>
 
 <style scoped>
