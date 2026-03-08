@@ -4,7 +4,7 @@
 
     <a class="pulse-link" href="https://buy.stripe.com/14AeVd9dW7Tp5GBebUfIs08">
       <figure>
-        <img :src="getImageUrl('breakout-camp','jpg')" alt="breakout basketball camp flyer" width="340px" height="604px">
+        <img :src="getImageUrl('breakout-camp','jpg')" alt="breakout basketball camp flyer" width="280px" height="500px">
       </figure>
     </a>
     <br>
