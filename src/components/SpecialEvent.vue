@@ -23,7 +23,7 @@
     <h3>Event Details</h3>
       <div class="event-details">
 
-        <a class="sign-up-link" href="https://buy.stripe.com/14AeVd9dW7Tp5GBebUfIs08">
+        <a class="sign-up-link pulse-link" href="https://buy.stripe.com/14AeVd9dW7Tp5GBebUfIs08">
           SIGN-UP HERE
         </a>
         
