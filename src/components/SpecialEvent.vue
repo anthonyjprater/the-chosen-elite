@@ -242,7 +242,7 @@ button {
 .pulse-link {
   display: inline-block;
   margin-top: 1.2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   padding: 0.75em 2em;
   border: 3px solid #fff;
   border-radius: 2em;
@@ -296,7 +296,8 @@ button:focus-visible {
 
 a.sign-up-link {
   color: #4CAF50;
-  font-size: 2rem;
+  font-size: 1.3rem;
+  font-weight: 900;
   text-shadow: #fff 1px 1px 1px;
 }
 
