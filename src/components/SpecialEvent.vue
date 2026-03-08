@@ -23,8 +23,8 @@
     <h3>Event Details</h3>
       <div class="event-details">
 
-        <a href="https://buy.stripe.com/14AeVd9dW7Tp5GBebUfIs08">
-          Sign-up link
+        <a class="sign-up-link" href="https://buy.stripe.com/14AeVd9dW7Tp5GBebUfIs08">
+          SIGN-UP HERE
         </a>
         
         <ul>
@@ -292,6 +292,12 @@ button:focus-visible {
   scale: 0.95;
   color: rgba(0, 0, 0, 0.5);
   text-shadow: none;
+}
+
+a.sign-up-link {
+  color: #4CAF50;
+  font-size: 2rem;
+  text-shadow: #fff 1px 1px 1px;
 }
 
 
