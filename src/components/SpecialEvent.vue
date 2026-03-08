@@ -22,6 +22,11 @@
 
     <h3>Event Details</h3>
       <div class="event-details">
+
+        <a href="https://buy.stripe.com/14AeVd9dW7Tp5GBebUfIs08">
+          Sign-up link
+        </a>
+        
         <ul>
           <li><strong>Date:</strong> Saturday, March 14, 2026</li>
           <li><strong>Times:</strong><br> 12:00 PM – 2:00 PM (Grades 5th-8th)<br> 2:15 PM - 4:15PM (Grades 9th-12th)</li>
@@ -237,6 +242,7 @@ button {
 .pulse-link {
   display: inline-block;
   margin-top: 1.2rem;
+  margin-bottom: 1rem;
   padding: 0.75em 2em;
   border: 3px solid #fff;
   border-radius: 2em;
