@@ -47,7 +47,7 @@ const userStore = useUserStore()
 const { termsAccepted } = storeToRefs(userStore)
 
 const PAYMENT_LINKS = {
-  1: 'https://buy.stripe.com/8wM7tQglc8B2djy6os',
+  1: 'https://buy.stripe.com/bJeaEX7502z5d930l4fIs09',
   10: 'https://buy.stripe.com/cN2g0m6KC04wfrGdQV',
   20: 'https://buy.stripe.com/dR66pMb0SbNe93ieV0',
   default: 'https://teamchosenelite.com/signup'
