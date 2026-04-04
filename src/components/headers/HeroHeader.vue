@@ -46,7 +46,6 @@ console.log(bgImage)
     <div class="links">
       <RouterLink class="sign-up" :to="{ name: 'apply-form'}">Sign up for training</RouterLink>
       
-      <SpecialEventLink class="pulse-link" />
 
     </div>
 
