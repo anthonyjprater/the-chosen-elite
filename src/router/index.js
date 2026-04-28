@@ -20,6 +20,7 @@ import PrivacyPage from '../views/PrivacyPage.vue'
 import TryoutsPage from '../views/TryoutsPage.vue'
 import SpecialEvent from '../views/SpecialEventPage.vue'
 import EventSignUp from '../views/EventSignUpPage.vue'
+import SummerCamps from '../components/SummerCamps.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -168,6 +169,11 @@ const router = createRouter({
       path: '/specialevent',
       name: 'specialevent',
       component: SpecialEvent
+    },
+    {
+      path: '/summercamps',
+      name: 'summercamps',
+      component: SummerCamps
     },
     {
       path: '/eventsignup',

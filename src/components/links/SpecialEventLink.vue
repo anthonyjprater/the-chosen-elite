@@ -1,9 +1,9 @@
 <script setup>
-
+import { RouterLink } from 'vue-router'
 </script>
 
 <template>
-    <RouterLink class="sign-up" :to="{ name: 'specialevent'}">2026 Spring Breakout Camp</RouterLink>
+    <RouterLink class="sign-up" :to="{ name: 'summercamps'}">2026 Spring Camp Series</RouterLink>
 </template>
 
 <style scoped>

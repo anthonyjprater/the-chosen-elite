@@ -13,7 +13,7 @@ const transparent = ref(true)
     <MainHeader :isTransparent="transparent"/>
     <h2 class="hero-headline">Train Your Mind and Body for Basketball Success</h2>
     <button class="sign-up">Sign up for training</button>
-    <SpecialEventLink />
+    <!-- <SpecialEventLink /> -->
   </div>
 </template>
 

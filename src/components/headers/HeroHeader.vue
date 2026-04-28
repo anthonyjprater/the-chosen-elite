@@ -44,8 +44,8 @@ console.log(bgImage)
         y: 0,
       }" >{{ title }}</h2>
     <div class="links">
-      <RouterLink class="sign-up" :to="{ name: 'apply-form'}">Sign up for training</RouterLink>
-      
+      <RouterLink class="sign-up" :to="{ name: 'signup'}">Sign up for training</RouterLink>
+      <!-- <SpecialEventLink /> -->
 
     </div>
 
