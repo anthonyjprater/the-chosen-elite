@@ -45,7 +45,17 @@ console.log(bgImage)
       }" >{{ title }}</h2>
     <div class="links">
       <RouterLink class="sign-up" :to="{ name: 'signup'}">Sign up for training</RouterLink>
-      <!-- <SpecialEventLink /> -->
+    <div class="camp-headline">
+      <h3>
+        Youth Basketball Camp
+      </h3>
+      <p>2 Sessions Ages 5-7 and Ages 8-10</p>
+      <p>A day of dribbles, laughs, and new friends. Fun-first basketball camp - no experience needed.</p>
+      <p>
+        <b>Sign up today - spots are limited!</b>
+      </p>
+    </div>
+      <SpecialEventLink />
 
     </div>
 
@@ -158,8 +168,15 @@ h2.hero-headline {
   transition: background 0.2s, color 0.2s;
 }
 .pulse-link:hover, .pulse-link:focus {
-  background: #fff;
+  background: green;
   color: #1a237e;
+}
+
+.camp-headline {
+  color: var(--white);
+  text-shadow: 1px 1px 1px var(--green);
+  opacity: 1;
+  line-height: 2;
 }
 
 @keyframes pulse-border {
