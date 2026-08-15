@@ -149,6 +149,7 @@
           <input type="hidden" name="_subject" value="New Apex Hoops Camp Registration!" />
           <input type="hidden" name="_captcha" value="false" />
           <input type="hidden" name="_template" value="table" />
+
           <div class="reg-form__row">
             <div class="form-group" :class="{ 'form-group--error': errors.parentName }">
               <label for="parentName">Parent / Guardian Name</label>
@@ -161,7 +162,7 @@
               <span class="form-group__error" v-if="errors.email">{{ errors.email }}</span>
             </div>
           </div>
- 
+
           <div class="reg-form__row">
             <div class="form-group" :class="{ 'form-group--error': errors.playerName }">
               <label for="playerName">Player's Name</label>
@@ -170,18 +171,23 @@
             </div>
             <div class="form-group" :class="{ 'form-group--error': errors.age }">
               <label for="age">Player's Age</label>
-              <input id="age" v-model="form.age" name="Player Age" type="number" min="5" max="11" placeholder="12" />
+              <input id="age" v-model="form.age" name="Player Age" type="number" min="1" max="18" placeholder="8" />
               <span class="form-group__error" v-if="errors.age">{{ errors.age }}</span>
             </div>
           </div>
- 
+
           <div class="reg-form__row">
             <div class="form-group" :class="{ 'form-group--error': errors.session }">
               <label for="session">Session</label>
               <select id="session" v-model="form.session" name="Session">
                 <option value="">Select a session…</option>
-                <option v-for="s in sessions" :key="s.id" :value="s.id">
-                  {{ s.name }} — {{ s.dates }}
+                <option
+                  v-for="s in sessions"
+                  :key="s.id"
+                  :value="s.id"
+                  :disabled="!isSessionEligible(s.id)"
+                >
+                  {{ s.name }} — {{ s.dates }} (Ages {{ s.ages }}){{ !isSessionEligible(s.id) && form.age ? ' — Not eligible' : '' }}
                 </option>
               </select>
               <span class="form-group__error" v-if="errors.session">{{ errors.session }}</span>
@@ -197,13 +203,28 @@
               <span class="form-group__error" v-if="errors.plan">{{ errors.plan }}</span>
             </div>
           </div>
- 
+
           <div class="form-group">
             <label for="notes">Additional Notes (optional)</label>
             <textarea id="notes" v-model="form.notes" name="Notes" rows="3" placeholder="Allergies, skill level, questions…"></textarea>
           </div>
- 
-          <button type="submit" class="btn btn--primary btn--lg btn--full" :disabled="isSubmitting">
+
+          <!-- Contact banner — shown when age doesn't fit any session -->
+          <div v-if="isAgeOutOfRange" class="reg-form__contact">
+            <div class="reg-form__contact-icon">🏀</div>
+            <div>
+              <strong>This age isn't eligible for a current session.</strong>
+              <p>Our camps currently serve ages 5–11. Reach out and we'll let you know about future programmes or waitlist options.</p>
+              <a href="mailto:chosen2handle@gmail.com" class="btn btn--primary btn--sm">Contact Us</a>
+            </div>
+          </div>
+
+          <button
+            v-if="!isAgeOutOfRange"
+            type="submit"
+            class="btn btn--primary btn--lg btn--full"
+            :disabled="isSubmitting"
+          >
             <span v-if="isSubmitting">Submitting…</span>
             <span v-else>Complete Registration</span>
           </button>
@@ -221,7 +242,7 @@
 </template>
 
 <script setup>
-import { ref, reactive } from 'vue'
+import { ref, reactive, computed, watch } from 'vue'
 
 // ── SCHEDULE DATA ──────────────────────────────────────────────
 const sessions = ref([
@@ -260,7 +281,6 @@ const plans = ref([
       'Camp t-shirt',
     ],
   },
-
 ])
 
 // ── COACHES DATA ───────────────────────────────────────────────
@@ -316,9 +336,37 @@ const testimonials = ref([
 const activeTestimonial = ref(0)
 
 // ── REGISTRATION FORM ──────────────────────────────────────────
-// Template ref — used to natively submit to formsubmit.co after validation
 const formRef = ref(null)
- 
+
+// ── AGE → SESSION ELIGIBILITY ──────────────────────────────────
+const SESSION_AGE_RANGES = {
+  'session-a': { min: 5, max: 7  },
+  'session-b': { min: 8, max: 11 },
+}
+
+// Returns IDs of sessions the entered age qualifies for
+const eligibleSessionIds = computed(() => {
+  const age = Number(form.age)
+  if (!age || age < 1) return []
+  return Object.entries(SESSION_AGE_RANGES)
+    .filter(([, range]) => age >= range.min && age <= range.max)
+    .map(([id]) => id)
+})
+
+// True when a valid age is entered but matches no session range
+const isAgeOutOfRange = computed(() => {
+  const age = Number(form.age)
+  return !!age && age > 0 && eligibleSessionIds.value.length === 0
+})
+
+// Returns true if a session is eligible for the entered age.
+// When no age is entered, all sessions remain selectable.
+function isSessionEligible(sessionId) {
+  const age = Number(form.age)
+  if (!age) return true
+  return eligibleSessionIds.value.includes(sessionId)
+}
+
 const form = reactive({
   parentName: '',
   email: '',
@@ -328,27 +376,46 @@ const form = reactive({
   plan: '',
   notes: '',
 })
- 
+
+// Auto-clear session when age changes and selected session becomes ineligible
+watch(() => form.age, () => {
+  if (form.session && !isSessionEligible(form.session)) {
+    form.session = ''
+  }
+})
+
 const errors = reactive({})
 const isSubmitting = ref(false)
- 
+
 function validate() {
   // Clear previous errors
   Object.keys(errors).forEach(k => delete errors[k])
+
   if (!form.parentName.trim()) errors.parentName = 'Parent name is required.'
   if (!form.email.trim() || !/\S+@\S+\.\S+/.test(form.email)) errors.email = 'A valid email is required.'
   if (!form.playerName.trim()) errors.playerName = 'Player name is required.'
-  if (!form.age || form.age < 8 || form.age > 18) errors.age = 'Age must be between 8 and 18.'
-  if (!form.session) errors.session = 'Please select a session.'
+
+  const age = Number(form.age)
+  if (!age || age < 1) {
+    errors.age = 'Please enter the player\'s age.'
+  } else if (isAgeOutOfRange.value) {
+    errors.age = 'This age is not eligible for any current session.'
+  }
+
+  if (!form.session) {
+    errors.session = 'Please select a session.'
+  } else if (!isSessionEligible(form.session)) {
+    const range = SESSION_AGE_RANGES[form.session]
+    errors.session = `This session is for ages ${range.min}–${range.max} only.`
+  }
+
   if (!form.plan) errors.plan = 'Please select a package.'
   return Object.keys(errors).length === 0
 }
- 
+
 function handleSubmit() {
   if (!validate()) return
- 
   isSubmitting.value = true
- 
   // Native submit: sends form data to formsubmit.co, which emails
   // the organizer and redirects the user to the Stripe payment link
   // defined in the hidden _next field.
@@ -824,6 +891,43 @@ function handleSubmit() {
 .form-group--error textarea { border-color: #f87171; }
 
 .form-group__error { font-size: 0.78rem; color: #f87171; }
+
+/* Disabled session options */
+.form-group select option:disabled {
+  color: var(--muted);
+  font-style: italic;
+}
+
+/* ── OUT-OF-RANGE CONTACT BANNER ────────────────────────────── */
+.reg-form__contact {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  background: rgba(248, 129, 88, 0.08);
+  border: 1px solid rgba(248, 129, 88, 0.35);
+  border-radius: var(--radius);
+  padding: 20px;
+}
+
+.reg-form__contact-icon {
+  font-size: 2rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.reg-form__contact strong {
+  display: block;
+  color: var(--white);
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+}
+
+.reg-form__contact p {
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.55;
+  margin: 0 0 14px;
+}
 
 .reg-form__success {
   background: rgba(34, 197, 94, 0.12);
