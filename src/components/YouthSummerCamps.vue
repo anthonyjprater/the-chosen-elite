@@ -214,7 +214,7 @@
             <div class="reg-form__contact-icon">🏀</div>
             <div>
               <strong>This age isn't eligible for a current session.</strong>
-              <p>Our camps currently serve ages 5–11. Reach out and we'll let you know about future programmes or waitlist options.</p>
+              <p>Our camps currently serve ages 5–11. Reach out and we'll let you know about future programs or waitlist options.</p>
               <a href="mailto:chosen2handle@gmail.com" class="btn btn--primary btn--sm">Contact Us</a>
             </div>
           </div>
