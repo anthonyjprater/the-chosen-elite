@@ -136,6 +136,19 @@
         <h2 class="section__title section__title--light">Ready to <span class="accent">Run?</span></h2>
         <p class="section__sub section__sub--light">Spots fill fast. Lock in your camper's spot today.</p>
 
+<!-- PDF Download Banner -->
+        <div class="pdf-banner">
+          <div class="pdf-banner__icon">📄</div>
+          <div class="pdf-banner__text">
+            <strong>Before you register, download and review the camp forms.</strong>
+            <span>Includes camp info, registration details, and medical forms.</span>
+          </div>
+          <a :href="campFormsPdf" download="camp-forms.pdf" class="btn btn--primary btn--sm pdf-banner__btn">
+            Download Forms
+          </a>
+        </div>
+
+
         <form
           ref="formRef"
           class="reg-form"
@@ -243,6 +256,8 @@
 
 <script setup>
 import { ref, reactive, computed, watch } from 'vue'
+import campFormsPdf from '@/assets/camp-forms.pdf'
+
 
 // ── SCHEDULE DATA ──────────────────────────────────────────────
 const sessions = ref([
@@ -937,6 +952,49 @@ function handleSubmit() {
   padding: 14px 18px;
   font-size: 0.9rem;
 }
+
+/* ── PDF DOWNLOAD BANNER ────────────────────────────────────── */
+.pdf-banner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+ 
+.pdf-banner__icon {
+  font-size: 1.8rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+ 
+.pdf-banner__text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1;
+  min-width: 0;
+}
+ 
+.pdf-banner__text strong {
+  color: var(--white);
+  font-size: 0.9rem;
+}
+ 
+.pdf-banner__text span {
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+ 
+.pdf-banner__btn {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+ 
 
 /* ── FOOTER ─────────────────────────────────────────────────── */
 .footer {
