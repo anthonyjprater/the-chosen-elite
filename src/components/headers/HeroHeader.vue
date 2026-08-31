@@ -45,7 +45,9 @@ console.log(bgImage)
       }" >{{ title }}</h2>
     <div class="links">
       <RouterLink class="sign-up" :to="{ name: 'signup'}">Sign up for training</RouterLink>
-    <div class="camp-headline">
+
+
+<!--    <div class="camp-headline">
       <h3>
         Youth Basketball Camp
       </h3>
@@ -56,6 +58,8 @@ console.log(bgImage)
       </p>
     </div>
       <SpecialEventLink />
+-->
+
 
     </div>
 
