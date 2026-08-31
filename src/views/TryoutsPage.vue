@@ -1,12 +1,12 @@
 <script setup>
 import MainHeader from '@/components/headers/MainHeader.vue';
-import SummerTryouts from '@/components/SummerTryouts.vue';
+import FallTryouts from '@/components/FallTryouts.vue';
 </script>
 
 <template>
     <MainHeader />
     <section>
-        <SummerTryouts />
+        <FallTryouts />
     </section>
 </template>
 

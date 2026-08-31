@@ -3,8 +3,13 @@ import { RouterLink } from 'vue-router'
 </script>
 
 <template>
+<!--
     <RouterLink class="sign-up pulse-link" :to="{ name: 'tryouts'}">Team Chosen Tryouts</RouterLink>
-</template>
+-->
+
+  <a href="https://pci.jotform.com/form/251396985429070" class="sign-up pulse-link">Team Chosen Tryouts</a>
+
+  </template>
 
 <style scoped>
 a.sign-up {
