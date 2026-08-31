@@ -3,7 +3,7 @@ import { RouterLink } from 'vue-router'
 </script>
 
 <template>
-    <RouterLink class="sign-up pulse-link" :to="{ name: 'youthsummercamps'}">Youth Summer Camp Series</RouterLink>
+    <RouterLink class="sign-up pulse-link" :to="{ name: 'tryouts'}">Team Chosen Tryouts</RouterLink>
 </template>
 
 <style scoped>
