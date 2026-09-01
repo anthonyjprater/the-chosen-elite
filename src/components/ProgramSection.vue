@@ -18,7 +18,7 @@ import myProfessionalImg from '@/assets/pro_player.png'
   const programsList = ref([
     {
       'title': 'amateurs',
-      'ages': 'From 9 to 17 years old',
+      'ages': 'Ages 8 and Up',
       'days': 'Tuesday/Friday',
       'time': 'Sessions 6pm-7pm and 7pm-8pm',
       'location': 'TBD',
