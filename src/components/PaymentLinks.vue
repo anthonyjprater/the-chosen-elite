@@ -56,7 +56,6 @@ const PAYMENT_LINKS = {
 const sessionOptions = [
   { sessions: 1, price: 25 },
   { sessions: 10, price: 200 },
-  { sessions: 20, price: 340 },
 ]
 
 const selectedOption = ref(null)
