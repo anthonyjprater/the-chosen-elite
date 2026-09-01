@@ -27,7 +27,9 @@ const image = ref("url('@/assets/placeholder-bg.jpg')")
     <MainCarousel />
     <ImageGallery />
     <MainContact />
+<!--
     <MainSignUp />
+-->
 </template>
 
 <style scoped>
