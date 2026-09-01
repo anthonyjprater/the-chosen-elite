@@ -39,7 +39,7 @@ function getImageUrl(name, ext) {
             </ul> -->
         </div>
         <img :src="getImageUrl('coach_tim4','jpg')" alt="" width="320px" height="480px">
-        <RouterLink class="sign-up" :to="{ name: 'apply-form'}">Sign up for training</RouterLink>
+        <RouterLink class="sign-up" :to="{ name: 'signup'}">Sign up for training</RouterLink>
     </section>
 </template>
 
