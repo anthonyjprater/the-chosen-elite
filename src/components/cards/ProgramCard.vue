@@ -33,6 +33,7 @@ const props = defineProps({
             <li>{{ program.days }}</li>
             <li>{{ program.time }}</li>
             <li>{{ program.exceptions }}</li>
+            <li>{{ program.location }}</li>
         </ul>
         <RouterLink class="read-more" :to="program.path">Read more</RouterLink>
     </article>

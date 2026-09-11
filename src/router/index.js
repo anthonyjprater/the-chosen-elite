@@ -22,6 +22,7 @@ import SpecialEvent from '../views/SpecialEventPage.vue'
 import EventSignUp from '../views/EventSignUpPage.vue'
 import SummerCamps from '../components/SummerCamps.vue'
 import YouthSummerCamps from '../components/YouthSummerCamps.vue'
+import BittyBallerz from '../views/BittyBallerz.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -180,6 +181,11 @@ const router = createRouter({
       path: '/youthsummercamps',
       name: 'youthsummercamps',
       component: YouthSummerCamps
+    },
+    {
+      path: '/bittyballerz',
+      name: 'bittyballerz',
+      component: BittyBallerz
     },
     {
       path: '/eventsignup',

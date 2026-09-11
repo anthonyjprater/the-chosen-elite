@@ -17,12 +17,12 @@ import myProfessionalImg from '@/assets/pro_player.png'
 
   const programsList = ref([
     {
-      'title': 'amateurs',
+      'title': 'All Skill Levels',
       'ages': 'Ages 8 and Up',
       'days': 'Tuesday/Friday',
-      'time': 'Sessions 6pm-7pm and 7pm-8pm',
-      'location': 'TBD',
-      'exceptions': 'Conditions may change',
+      'time': 'Sessions 1: Footwork and Ball Handling 6pm-7pm',
+      'location': 'Challenger Elementary 9600 Holly Drive Everett, WA 98204',
+      'exceptions': 'Session 2: Shooting and Attacking and 7pm-8pm',
       'id': '1',
       'image': myYouthImg,
       'path': { name: 'amateur' }

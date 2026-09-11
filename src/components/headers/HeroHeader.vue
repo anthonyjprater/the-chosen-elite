@@ -3,6 +3,7 @@ import { ref } from 'vue'
 import MainHeader from './MainHeader.vue'
 import TryoutsLink from '../links/TryoutsLink.vue'
 import SpecialEventLink from '../links/SpecialEventLink.vue'
+import IttyBittyBallerzLink from '../links/IttyBittyBallerzLink.vue'
 
 const transparent = ref(true)
 
@@ -61,6 +62,7 @@ console.log(bgImage)
     
       <SpecialEventLink />
 
+       <IttyBittyBallerzLink />
 
     </div>
 
