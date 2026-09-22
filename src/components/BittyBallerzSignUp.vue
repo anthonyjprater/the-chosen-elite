@@ -159,7 +159,7 @@
           novalidate
         >
           <!-- formsubmit.co configuration -->
-          <input type="hidden" name="_next" value="https://buy.stripe.com/14A5kDduc5Lhed79VEfls0b" />
+          <input type="hidden" name="_next" :value="nextUrl" />
           <input type="hidden" name="_subject" value="New Itty Bitty Ballers Academy Registration!" />
           <input type="hidden" name="_captcha" value="false" />
           <input type="hidden" name="_template" value="table" />
@@ -261,6 +261,56 @@
           </button>
         </form>
       </div>
+
+      <div 
+        v-if="showRedirectConfirm" 
+        class="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 redirect-modal"
+      >
+        <div class="modal-content bg-white rounded-xl p-6 max-w-md w-full shadow-xl">
+          <div class="redirect-summary">
+            <h3 class="summary-title">Review Your Registration</h3>
+
+            <ul class="summary-list">
+              <li><strong>Parent:</strong> {{ form.parentName }}</li>
+              <li><strong>Player:</strong> {{ form.playerName }} (Age {{ form.age }})</li>
+              <li><strong>Session:</strong> {{ getSession(form.session)?.name }}</li>
+              <li><strong>Dates:</strong> {{ getSession(form.session)?.dates }}</li>
+              <li><strong>Package:</strong> {{ getPlan(form.plan)?.name }}</li>
+              <li><strong>Price:</strong> ${{ getPlan(form.plan)?.price }}</li>
+            </ul>
+
+            <div class="summary-checkout-link">
+              <strong>Stripe Checkout Link:</strong><br />
+              <a :href="nextUrl" target="_blank">{{ nextUrl }}</a>
+            </div>
+          </div>
+          <div class="secure-badge">
+            🔒 <span>Secure checkout powered by Stripe</span>
+          </div>
+          
+                <!-- Buttons -->
+          <div class="flex gap-3">
+            <button 
+              @click="confirmRedirect"
+              class="flex-1 bg-blue-600 text-white py-2 rounded-lg font-semibold"
+            >
+              Continue to Payment
+            </button>
+
+            <button 
+              @click="cancelRedirect"
+              class="flex-1 bg-gray-200 text-gray-800 py-2 rounded-lg font-semibold"
+            >
+              Cancel
+            </button>
+          </div>
+
+
+        </div>
+      </div>
+
+
+
     </section>
 
     <!-- ===== FOOTER ===== -->
@@ -269,7 +319,8 @@
       <span>Questions? <a href="mailto:chosen2handle@gmail.com">chosen2handle@gmail.com</a></span>
     </footer>
 
-  </div>
+  </div>  
+
 </template>
 
 <script setup>
@@ -395,6 +446,10 @@ const form = reactive({
   notes: '',
 })
 
+const showRedirectConfirm = ref(false)
+let pendingNextUrl = ''
+
+
 function getSession(sessionId) {
   return sessions.value.find((session) => session.id === sessionId)
 }
@@ -485,6 +540,24 @@ function validate() {
 function handleSubmit() {
   if (!validate()) return
 
+  // Determine redirect URL based on selected plan
+  const selectedPlan = form.plan
+  if (selectedPlan === 'one-session') {
+    pendingNextUrl = 'https://buy.stripe.com/cNi6oHfCk0qX2up5Fofls0c'
+  } else if (selectedPlan === 'four-session') {
+    pendingNextUrl = 'https://buy.stripe.com/14A5kDduc5Lhed79VEfls0b'
+  }
+
+  // Show confirmation screen instead of submitting immediately
+  showRedirectConfirm.value = true
+}
+
+function confirmRedirect() {
+  // Apply the chosen redirect URL
+  const nextField = formRef.value.querySelector('input[name="_next"]')
+  if (nextField) nextField.value = pendingNextUrl
+
+  // Continue with original submission flow
   isSubmitting.value = true
   submitError.value = false
   clearSubmitTimeout()
@@ -495,24 +568,13 @@ function handleSubmit() {
     submitTimeoutId = null
   }, SUBMIT_TIMEOUT_MS)
 
-  // ── Dynamic redirect based on selected plan ─────────────────
-  const nextField = formRef.value.querySelector('input[name="_next"]')
-
-  if (nextField) {
-    // Single Session Drop‑In
-    if (form.plan === 'one-session') {
-      nextField.value = 'https://buy.stripe.com/cNi6oHfCk0qX2up5Fofls0c'
-    }
-
-    // Full Academy (4 sessions)
-    if (form.plan === 'four-session') {
-      nextField.value = 'https://buy.stripe.com/14A5kDduc5Lhed79VEfls0b'
-    }
-  }
-
-  // Native submit
   formRef.value.submit()
 }
+
+function cancelRedirect() {
+  showRedirectConfirm.value = false
+}
+
 
 
 function getImageUrl(name, ext) {
@@ -1112,6 +1174,126 @@ function getImageUrl(name, ext) {
   color: var(--muted);
 }
 .footer a { color: var(--orange); text-decoration: none; }
+
+/* ===== Redirect Confirmation Modal ===== */
+
+.redirect-modal {
+    animation: fadeIn 0.25s ease-out;
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(4px);
+
+    z-index: 9999; /* higher than your nav, hero, etc */
+
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Modal container */
+.redirect-modal .modal-content {
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 1.75rem;
+  max-width: 420px;
+  width: 100%;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+/* ===== Summary Section ===== */
+
+.redirect-summary {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  padding: 1rem 1.25rem;
+  border-radius: 0.75rem;
+}
+
+.redirect-summary .summary-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.redirect-summary .summary-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.redirect-summary .summary-list li {
+  font-size: 0.9rem;
+  color: #374151;
+  padding: 0.15rem 0;
+}
+
+/* Stripe link */
+.summary-checkout-link a {
+  color: #2563eb;
+  text-decoration: underline;
+  word-break: break-all;
+}
+
+/* ===== Secure Badge ===== */
+
+.secure-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: #6b7280;
+  background: #f3f4f6;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+}
+
+/* ===== Buttons ===== */
+
+.redirect-modal button {
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.redirect-modal button:hover {
+  transform: translateY(-1px);
+}
+
+.redirect-modal button:active {
+  transform: translateY(0);
+}
+
+/* Mobile adjustments */
+@media (max-width: 480px) {
+  .redirect-summary {
+    padding: 0.75rem 1rem;
+  }
+
+  .redirect-modal .modal-content {
+    padding: 1.25rem;
+  }
+}
+
+.camp-landing {
+  position: static !important;
+  overflow: visible !important;
+}
+
 
 /* ── RESPONSIVE ─────────────────────────────────────────────── */
 @media (max-width: 640px) {
