@@ -238,6 +238,18 @@
             </div>
           </div>
 
+          <!-- Submit-failure banner — shown if the native submit hasn't navigated
+               the page away after a few seconds (silent failure: blocked request,
+               ad blocker, network issue, etc.) -->
+          <div v-if="submitError" class="reg-form__contact reg-form__contact--error">
+            <div class="reg-form__contact-icon">⚠️</div>
+            <div>
+              <strong>Something went wrong submitting your registration.</strong>
+              <p>Your registration wasn't sent. Please try again — if it keeps happening, it may be a browser extension (like an ad blocker) blocking the request, or you can email us directly instead.</p>
+              <a href="mailto:chosen2handle@gmail.com" class="btn btn--primary btn--sm">Email Us Instead</a>
+            </div>
+          </div>
+
           <button
             v-if="!isSelectionIneligible"
             type="submit"
@@ -261,7 +273,7 @@
 </template>
 
 <script setup>
-import { ref, reactive, computed, watch } from 'vue'
+import { ref, reactive, computed, watch, onUnmounted } from 'vue'
 import campFormsPdf from '@/assets/camp-forms.pdf'
 
 
@@ -422,6 +434,26 @@ watch(() => form.session, (sessionId) => {
 
 const errors = reactive({})
 const isSubmitting = ref(false)
+const submitError = ref(false)
+
+// If the native form.submit() call below succeeds, the browser navigates
+// away to formsubmit.co (and then on to the Stripe _next URL), which
+// destroys this component and this timer along with it. If that
+// navigation is silently blocked — an ad blocker, a network hiccup, a
+// misconfigured endpoint — the page just sits here. This timer is the
+// fallback that catches that case and gives the visitor visible feedback
+// instead of leaving the button stuck on "Submitting…" forever.
+const SUBMIT_TIMEOUT_MS = 8000
+let submitTimeoutId = null
+
+function clearSubmitTimeout() {
+  if (submitTimeoutId) {
+    clearTimeout(submitTimeoutId)
+    submitTimeoutId = null
+  }
+}
+
+onUnmounted(clearSubmitTimeout)
 
 function validate() {
   // Clear previous errors
@@ -452,10 +484,22 @@ function validate() {
 
 function handleSubmit() {
   if (!validate()) return
+
   isSubmitting.value = true
+  submitError.value = false
+  clearSubmitTimeout()
+
   // Native submit: sends form data to formsubmit.co, which emails
   // the organizer and redirects the user to the Stripe payment link
-  // defined in the hidden _next field.
+  // defined in the hidden _next field. On success this navigates the
+  // browser away and this component is torn down, so the timeout below
+  // never fires. If it does fire, the navigation never happened.
+  submitTimeoutId = setTimeout(() => {
+    isSubmitting.value = false
+    submitError.value = true
+    submitTimeoutId = null
+  }, SUBMIT_TIMEOUT_MS)
+
   formRef.value.submit()
 }
 
@@ -965,6 +1009,11 @@ function getImageUrl(name, ext) {
   border: 1px solid rgba(248, 129, 88, 0.35);
   border-radius: var(--radius);
   padding: 20px;
+}
+
+.reg-form__contact--error {
+  background: rgba(248, 113, 113, 0.08);
+  border-color: rgba(248, 113, 113, 0.4);
 }
 
 .reg-form__contact-icon {
