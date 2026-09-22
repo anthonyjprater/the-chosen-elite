@@ -543,9 +543,9 @@ function handleSubmit() {
   // Determine redirect URL based on selected plan
   const selectedPlan = form.plan
   if (selectedPlan === 'one-session') {
-    pendingNextUrl = 'https://buy.stripe.com/cNi6oHfCk0qX2up5Fofls0c'
+    pendingNextUrl = 'https://buy.stripe.com/cNi6oHfCk0qX2up5FofIs0c'
   } else if (selectedPlan === 'four-session') {
-    pendingNextUrl = 'https://buy.stripe.com/14A5kDduc5Lhed79VEfls0b'
+    pendingNextUrl = 'https://buy.stripe.com/14A5kDduc5Lhed79VEfIs0b'
   }
 
   // Show confirmation screen instead of submitting immediately
