@@ -304,7 +304,7 @@ const plans = ref([
   {
     id: 'one-session',
     name: 'Drop-In',
-    price: 50,
+    price: 40,
     period: 'per session',
     tag: '',
     highlight: false,
