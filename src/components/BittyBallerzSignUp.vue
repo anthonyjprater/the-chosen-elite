@@ -489,19 +489,31 @@ function handleSubmit() {
   submitError.value = false
   clearSubmitTimeout()
 
-  // Native submit: sends form data to formsubmit.co, which emails
-  // the organizer and redirects the user to the Stripe payment link
-  // defined in the hidden _next field. On success this navigates the
-  // browser away and this component is torn down, so the timeout below
-  // never fires. If it does fire, the navigation never happened.
   submitTimeoutId = setTimeout(() => {
     isSubmitting.value = false
     submitError.value = true
     submitTimeoutId = null
   }, SUBMIT_TIMEOUT_MS)
 
+  // ── Dynamic redirect based on selected plan ─────────────────
+  const nextField = formRef.value.querySelector('input[name="_next"]')
+
+  if (nextField) {
+    // Single Session Drop‑In
+    if (form.plan === 'one-session') {
+      nextField.value = 'https://buy.stripe.com/cNi6oHfCk0qX2up5Fofls0c'
+    }
+
+    // Full Academy (4 sessions)
+    if (form.plan === 'four-session') {
+      nextField.value = 'https://buy.stripe.com/14A5kDduc5Lhed79VEfls0b'
+    }
+  }
+
+  // Native submit
   formRef.value.submit()
 }
+
 
 function getImageUrl(name, ext) {
   return new URL(`../assets/${name}.${ext}`, import.meta.url).href
