@@ -58,9 +58,9 @@ console.log(bgImage)
         <b>Sign up today - spots are limited!</b>
       </p>
     </div>
--->
-    
+
       <SpecialEventLink />
+-->
 
        <IttyBittyBallerzLink />
 
